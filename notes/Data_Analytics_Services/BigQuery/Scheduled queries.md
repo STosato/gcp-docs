@@ -24,6 +24,7 @@ Here:
 
 >***Note:*** here the dates must be in <span class="red">UTC</span>, but *queries schedules in dashboard* are in local timezone
 
- ![[backfill.png]]
+ 
+!["alt"](../../images/backfill.png)
 
  

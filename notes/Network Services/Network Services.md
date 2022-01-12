@@ -13,7 +13,8 @@ Can route requests also across the globe
 
 Both can be internal or external for *scalability*
 
-![[Load Balancing.png]]
+
+!["alt"](../../images/Load Balancing.png)
 ## Virtual Prvate Cloud
 Software-defined network providing private networking for VMs.
 
@@ -38,4 +39,5 @@ Extending local datacenter **steamlessly** to GCP infrastructure
 - **Peering**: Direct access to Google Cloud resources with reduced internet edges fee
 
 
-![[Pasted image 20211230171158.png]]
+
+!["alt"](../../images/Pasted image 20211230171158.png)

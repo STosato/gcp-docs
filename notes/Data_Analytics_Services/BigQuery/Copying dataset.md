@@ -11,11 +11,11 @@ Sidebar > APIs & Services > Enable APIs & Services > search "BigQuery Data Trans
 
 ## 3. Copying the dataset
 Go to the **source dataset** and click "copy dataset"
-![[copyDataset1.png]]
+!["alt"](../../images/copyDataset1.png)
 
 Then select **destination**
 
-![[CopyDataset2.png]]
+!["alt"](../../images/CopyDataset2.png)
 
 # Scheduling 
 Left menu > Transfers > Create Transfer

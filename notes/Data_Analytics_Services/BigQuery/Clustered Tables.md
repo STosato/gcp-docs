@@ -10,7 +10,7 @@ A bucket will contain <u>people with same salary</u> (<span class="purple">purpl
 
 > ***Note:*** a bucket can contain multiple salaries values (<span class="orange">orange box</span>))
 
-![[cluster-example.png]]
+!["alt"](../../images/cluster-example.png)
 
 ## Do and Don'ts
 ==section 8==

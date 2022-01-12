@@ -1,7 +1,7 @@
 # Cloud Pub/Sub
 Based on publishing/subscription pattern
 
-![[pub-sub-pattern.png]]
+!["alt"](../images/pub-sub-pattern.png)
 
 Fully-Managed real-time messaging service allowing to efficiently send and receive messages between applications and services.
 

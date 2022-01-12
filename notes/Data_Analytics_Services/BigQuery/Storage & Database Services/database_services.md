@@ -44,4 +44,4 @@ Are ideal for applications caches providing sub-millisecond data access.
 Promises 99.9% availability with automatic [[failover]]
 
 ## Use Cases
-![[db_services_usecases.png]]
+!["alt"](images/db_services_usecases.png)

@@ -6,7 +6,8 @@ We may strive to have only one copy of each piece of data in database.
 
 Usially **core data** is organized in one main table. Other data is on other tables.
 
-![[normalization.png]]
+
+!["alt"](../../images/normalization.png)
 
 Has the **<span class="red">con</span>** of slowing down queries .
 

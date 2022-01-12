@@ -17,5 +17,5 @@ In **Advanced Options**, set **write preferences** as <u>overwrite table</u>. So
 > You'll need to insert the new schema when creating the "new" table
 
 ### Appending rows
-Same as ujpdating but in **advanced options**, set **append**.
+Same as updating but in **advanced options**, set **append**.
 

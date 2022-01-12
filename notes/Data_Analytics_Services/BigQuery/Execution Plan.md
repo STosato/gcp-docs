@@ -3,7 +3,8 @@ What is running under the wood when the query is running?
 
 It breaks declarative SQL statements into granular sets of execution stages and designs an **execution graph**
 
-![[planExecution.png]]
+
+!["alt"](../../images/planExecution.png)
 
 So will be created an **Execution Plan** to list all the parallel and dependent tasks.
 

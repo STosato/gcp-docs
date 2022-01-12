@@ -18,7 +18,7 @@ using the `WHERE` clause and using partitions optimized on it,
 
 When we go into the buckets. It can contain multiple values, so the **entire bucket must be processed**
 
-![[cluster-example.png]]
+!["alt"](../../images/cluster-example.png)
 
 ### Data is huge within partition
 

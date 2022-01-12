@@ -10,7 +10,7 @@ Create table from: "Google Cloud storage" > Browse the file
 
 >**Note:** External data doesn't provide table preview and don't get how many bytes will be processed
 ### Permanent vs temporary tables
-![[permanent_vs_temp_tables.png]]
+!["alt"](../../images/permanent_vs_temp_tables.png)
 
 ### Printing filename where table belongs
 

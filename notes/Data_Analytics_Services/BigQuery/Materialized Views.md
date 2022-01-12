@@ -6,7 +6,8 @@ Compared to normal views :
 - <span class="green">are faster</span>: normal ones firstly are applied to base tables. Instead, material ones are pre-computed
 - **smart tuning**: if a query can be served with an already created materialized view, this will be done
 ## Example
-![[creating_materialized-view.png]]
+
+!["alt"](../../images/creating_materialized-view.png)
 ## Create a Materialized view
 Simply by using `CREATE MATERIALIZED VIEW name AS ...`
 

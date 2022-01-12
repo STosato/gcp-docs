@@ -10,4 +10,4 @@ Uses [[Cloud Pub Sub]] for ingesting data at scale
 [[Big Query]]
 
 ## Use Cases
-![[DAS_usecases.png]]
+!["alt"](../images/DAS_usecases.png)

@@ -16,14 +16,14 @@ Partitioning makes the table easy to manage, performance is enhanced.
 
  The **source table** is some transactional database containing monthly data and gets refreshed daily with <u>increments</u>.
 
- ![[bulk-data1.png]]
+ !["alt"](../../images/bulk-data1.png)
 
  ### Solution
  Partitioning target table on month. And daily **switching the partition with a new one** 
  from source table.
 
  This takes less time
- ![[Pasted image 20220107114346.png]]
+ !["alt"](../../images/datawarehouse-partitioning.png)
 
 ## Creating partitioned table
  When creating a table,
@@ -38,7 +38,7 @@ This implies that user is forced to take full use of partitioning while the tabl
 It may **reduce cost** and **improve performances**
 
 ## Copy and paste
-![[Pasted image 20220107124405.png]]
+!["alt"](../../images/partitioning-options.png)
 
 ## DML ops
 Same as normal but adding a **fltering on the partition**

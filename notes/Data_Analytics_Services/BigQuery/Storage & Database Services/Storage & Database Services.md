@@ -5,7 +5,8 @@
 • GCS can scale to exabytes of data   
 • Data can be stored within a single region, dual-region, or multi-region
 
-![[storage-services.png]]
+
+!["alt"](images/storage-services.png)
 ### Persistent disks
 - Independent (out of the context) from compute engine VMs
 - Only one writer, multiple readers
@@ -30,6 +31,7 @@ graph TD
 
  C --> E[File]
 ```
-![[Pasted image 20211230165549.png]]
+
+!["alt"](images/Pasted image 20211230165549.png)
 
 ![[database_services]]

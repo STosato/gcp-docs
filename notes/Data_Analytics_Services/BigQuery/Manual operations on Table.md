@@ -9,7 +9,8 @@ FROM table_name
 ```
 
 Then select **query settings**
-![[queryOptions-overwrite.png]]
+
+!["alt"](../../images/queryOptions-overwrite.png)
 
 ## Changing datatype
 By using a query where we cast the desired column to the desired data type.

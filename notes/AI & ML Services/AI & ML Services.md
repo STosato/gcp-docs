@@ -4,4 +4,4 @@
 [[AI Platform]] provides end-to-end ML pipelines on-premises and cloud  
 [[AI Hub]] is a Google hosted repository to discover, share, and deploy ML models. *It is a collection of artifacts and various resourses that can be shared*
 
-![[MLAI_usecases.png]]
+!["MLAI_usecases.png"](../images/MLAI_usecases.png)

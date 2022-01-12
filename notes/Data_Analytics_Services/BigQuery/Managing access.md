@@ -2,5 +2,6 @@
 
 Dataset > Share dataset
 
-![[dataset-permissions.png]]
+
+!["alt"](../../images/dataset-permissions.png)
 

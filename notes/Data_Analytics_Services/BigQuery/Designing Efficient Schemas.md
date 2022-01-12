@@ -15,7 +15,8 @@ In BigQuery, **<span class="orange">nested</span> = struct** and **<span class="
 
 So nested and repeated columns can **mantain relationships** without perdormance impact.
 
-![[nested-table-example.png]]
+
+!["alt"](../../images/nested-table-example.png)
 
 Here's the file
 ```JSON
@@ -45,7 +46,8 @@ You'll need to click "Create table" button
 Then set type ==RECORD== and mode ==REPEATED==.
 Then a <span class="green">+ (plus)</span> button will appear at the right of the **Name field** 
 
-![[nested-field-schema-manual.png]]
+
+!["alt"](../../images/nested-field-schema-manual.png)
 
 ## How to query the table
 You'll need to use `UNNEST`

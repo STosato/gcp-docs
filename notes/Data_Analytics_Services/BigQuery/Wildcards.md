@@ -7,7 +7,7 @@ Can be used for tables with:
 - similar schema
 - same prefix
 
-![[Pasted image 20211230173741.png]]
+!["alt"](../../images/wildcards-example.png)
 
 ### Practical example
 If having a dataset containing tables with the same schema for every year. say:

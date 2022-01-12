@@ -8,7 +8,7 @@
 
 ## Reducing bytes read
 - Avoid `SELECT *`
-- `LIMIT` does not limit data scanned. Use "[[maximum bytes billed]]" in query settings instead
+- `LIMIT` does not limit data scanned. Use "[[Maximum bytes billed]]" in query settings instead
 - Use partitioning or clustering
 - Use [[Normalization-Denormalization|denormalization]]
 - Use [[Materialized Views]] to keep aggregated data

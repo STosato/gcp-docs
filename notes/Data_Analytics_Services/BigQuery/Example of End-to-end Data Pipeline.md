@@ -2,9 +2,11 @@
 We want to create ad appligation for analysis for a restaurant.
 Each day we receive a csv file containing this information
 
-![[Pasted image 20220105144625.png]]
+
+!["alt"](../../images/data-pipeline-example-table.png)
 ## Our approach
-![[ExampleData Pipeline.png]]
+
+!["alt"](../../images/ExampleData Pipeline.png)
 ### Using Apache Beam
 Apache Beam is an open source, unified model for defining both batch- and streaming-data parallel-processing pipelines. The Apache Beam programming model simplifies the mechanics of large-scale data processing
 `pip install apache-beam[gcp]`
@@ -207,4 +209,5 @@ with models.DAG('food_orders_dag',
 ### Cloud composer
 On Bq, search  "Cloud composer" > create envirnoment
 
-![[Pasted image 20220105162936.png]]
+
+!["alt"](../../images/Pasted image 20220105162936.png)

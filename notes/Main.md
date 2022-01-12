@@ -1,10 +1,11 @@
 # Google Cloud Platform
 ## GCP vs others
-![[GCP_vs_others.png]]
+!
 ## Network
 GCP is divided in **regions** -> **zones** -> **network edge locations** 
 ## The Big picture
-![[GCP_BigPicture.png]]
+
+!["alt"](../../images/GCP_BigPicture.png)
 
 ## Resources
 When launching, it results a creation of [[Resource]]s

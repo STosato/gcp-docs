@@ -10,4 +10,4 @@ Choices:
 - [[Cloud Functions]]: functions as a service (FaaS)
 
 ## Use cases
-!["alt"](../images/comp-services-use-cases.png)
+!["alt"](../Images/comp-services-use-cases.png)

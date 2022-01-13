@@ -5,7 +5,7 @@
 GCP is divided in **regions** -> **zones** -> **network edge locations** 
 ## The Big picture
 
-!["alt"](../../images/GCP_BigPicture.png)
+!["alt"](Images/GCP_BigPicture.png)
 
 ## Resources
 When launching, it results a creation of [[Resource]]s

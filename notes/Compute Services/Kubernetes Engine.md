@@ -41,7 +41,7 @@ Manages [[#Worker node]]s and [[#Pod]]s in the [[#Cluster]]
 In Production environments runs on multiple computers.
 
 
-!["alt"](../../images/Kubernetes.png)
+!["alt"](../../Images/Kubernetes.png)
 
 ### Node pool
 GKE’s **unique feature**: mixes homogeneous (with same configuration) VMs.

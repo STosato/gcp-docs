@@ -10,4 +10,4 @@ IDE and tools integration enables developer productivity
 
 ## Use Cases
 
-!["alt"](../images/UseCases.png)
+!["alt"](../Images/UseCases.png)

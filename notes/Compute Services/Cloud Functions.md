@@ -8,4 +8,4 @@ It is fundamentally different from App Engine, Compute Engine, [[Kubernetes]] en
 
 Tipically serverless compute environments **respond to events** via ==triggers==. They run like a daemon
 
-!["alt"](../images/CloudFunctions.png)
+!["alt"](../Images/CloudFunctions.png)

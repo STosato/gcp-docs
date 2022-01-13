@@ -7,4 +7,4 @@ May be organized in **folders**.
 Organization is an entity **at the top** of the hierarchy. (Only visible if using *GSuite*, otherwise is not visible)
 
 
-!["alt"](../../images/Project_Hierarchy.png)
+!["alt"](../../Images/Project_Hierarchy.png)

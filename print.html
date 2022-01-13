@@ -1,0 +1,843 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook and mdzk -->
+        <meta charset="UTF-8">
+        <title>GCP notes </title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="AI & ML Services/AI & ML Services.html"><strong aria-hidden="true">1.</strong> AI &amp; ML Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="AI & ML Services/AI Building Blocks.html"><strong aria-hidden="true">1.1.</strong> AI Building Blocks</a></li><li class="chapter-item "><a href="AI & ML Services/AI Hub.html"><strong aria-hidden="true">1.2.</strong> AI Hub</a></li><li class="chapter-item "><a href="AI & ML Services/AI Platform.html"><strong aria-hidden="true">1.3.</strong> AI Platform</a></li><li class="chapter-item "><a href="AI & ML Services/Cloud AutoML.html"><strong aria-hidden="true">1.4.</strong> Cloud AutoML</a></li></ol></li><li class="chapter-item "><a href="Compute Services/Compute Services.html"><strong aria-hidden="true">2.</strong> Compute Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Compute Services/App Engine.html"><strong aria-hidden="true">2.1.</strong> App Engine</a></li><li class="chapter-item "><a href="Compute Services/Cloud Functions.html"><strong aria-hidden="true">2.2.</strong> Cloud Functions</a></li><li class="chapter-item "><a href="Compute Services/Compute Engine.html"><strong aria-hidden="true">2.3.</strong> Compute Engine</a></li><li class="chapter-item "><a href="Compute Services/Kubernetes Engine.html"><strong aria-hidden="true">2.4.</strong> Kubernetes Engine</a></li></ol></li><li class="chapter-item "><a href="Data_Analytics_Services/Data Analytics Services.html"><strong aria-hidden="true">3.</strong> Data Analytics Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery.html"><strong aria-hidden="true">3.1.</strong> BigQuery</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Storage & Database Services/Storage & Database Services.html"><strong aria-hidden="true">3.1.1.</strong> Storage &amp; Database Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Storage & Database Services/database_services.html"><strong aria-hidden="true">3.1.1.1.</strong> database_services</a></li></ol></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Architecture.html"><strong aria-hidden="true">3.1.2.</strong> Architecture</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Automatic schema detection.html"><strong aria-hidden="true">3.1.3.</strong> Automatic schema detection</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Best practices.html"><strong aria-hidden="true">3.1.4.</strong> Best practices</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Build Streaming data pipelines.html"><strong aria-hidden="true">3.1.5.</strong> Build Streaming data pipelines</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/CLI.html"><strong aria-hidden="true">3.1.6.</strong> CLI</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Caching.html"><strong aria-hidden="true">3.1.7.</strong> Caching</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Clustered Tables.html"><strong aria-hidden="true">3.1.8.</strong> Clustered Tables</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Copying dataset.html"><strong aria-hidden="true">3.1.9.</strong> Copying dataset</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Create & Query Permanent Table on Cloud Storage bucket.html"><strong aria-hidden="true">3.1.10.</strong> Create &amp; Query Permanent Table on Cloud Storage bucket</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Create Cloud Storage bucket.html"><strong aria-hidden="true">3.1.11.</strong> Create Cloud Storage bucket</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Designing Efficient Schemas.html"><strong aria-hidden="true">3.1.12.</strong> Designing Efficient Schemas</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Example of End-to-end Data Pipeline.html"><strong aria-hidden="true">3.1.13.</strong> Example of End-to-end Data Pipeline</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Execution Plan.html"><strong aria-hidden="true">3.1.14.</strong> Execution Plan</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/External data source Limitations.html"><strong aria-hidden="true">3.1.15.</strong> External data source Limitations</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Field partition.html"><strong aria-hidden="true">3.1.16.</strong> Field partition</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Ingestion time partition tables.html"><strong aria-hidden="true">3.1.17.</strong> Ingestion time partition tables</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Managing access.html"><strong aria-hidden="true">3.1.18.</strong> Managing access</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Manual operations on Table.html"><strong aria-hidden="true">3.1.19.</strong> Manual operations on Table</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Materialized Views.html"><strong aria-hidden="true">3.1.20.</strong> Materialized Views</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Maximum bytes billed.html"><strong aria-hidden="true">3.1.21.</strong> Maximum bytes billed</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Native operations on Table for Schema change.html"><strong aria-hidden="true">3.1.22.</strong> Native operations on Table for Schema change</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Pricing.html"><strong aria-hidden="true">3.1.23.</strong> Pricing</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Python lib.html"><strong aria-hidden="true">3.1.24.</strong> Python lib</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Query settings.html"><strong aria-hidden="true">3.1.25.</strong> Query settings</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Saved queries.html"><strong aria-hidden="true">3.1.26.</strong> Saved queries</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Scheduled queries.html"><strong aria-hidden="true">3.1.27.</strong> Scheduled queries</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Streaming data.html"><strong aria-hidden="true">3.1.28.</strong> Streaming data</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Table partitioning.html"><strong aria-hidden="true">3.1.29.</strong> Table partitioning</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/UI.html"><strong aria-hidden="true">3.1.30.</strong> UI</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Views.html"><strong aria-hidden="true">3.1.31.</strong> Views</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/When to use Clustering or Partitioning or Both.html"><strong aria-hidden="true">3.1.32.</strong> When to use Clustering or Partitioning or Both</a></li><li class="chapter-item "><a href="Data_Analytics_Services/BigQuery/Wildcards.html"><strong aria-hidden="true">3.1.33.</strong> Wildcards</a></li></ol></li><li class="chapter-item "><a href="Data_Analytics_Services/Cloud Dataflow.html"><strong aria-hidden="true">3.2.</strong> Cloud Dataflow</a></li><li class="chapter-item "><a href="Data_Analytics_Services/Cloud Datalab.html"><strong aria-hidden="true">3.3.</strong> Cloud Datalab</a></li><li class="chapter-item "><a href="Data_Analytics_Services/Cloud Dataproc.html"><strong aria-hidden="true">3.4.</strong> Cloud Dataproc</a></li><li class="chapter-item "><a href="Data_Analytics_Services/Cloud Pub Sub.html"><strong aria-hidden="true">3.5.</strong> Cloud Pub Sub</a></li></ol></li><li class="chapter-item "><a href="DevOps Services/DevOps Services.html"><strong aria-hidden="true">4.</strong> DevOps Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="DevOps Services/Cloud Build.html"><strong aria-hidden="true">4.1.</strong> Cloud Build</a></li><li class="chapter-item "><a href="DevOps Services/Cloud Source Repositories.html"><strong aria-hidden="true">4.2.</strong> Cloud Source Repositories</a></li><li class="chapter-item "><a href="DevOps Services/Container Registry.html"><strong aria-hidden="true">4.3.</strong> Container Registry</a></li><li class="chapter-item "><a href="DevOps Services/Example1.html"><strong aria-hidden="true">4.4.</strong> Example1</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> GCP-Notions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="GCP-Notions/Project.html"><strong aria-hidden="true">5.1.</strong> Project</a></li><li class="chapter-item "><a href="GCP-Notions/Resource.html"><strong aria-hidden="true">5.2.</strong> Resource</a></li></ol></li><li class="chapter-item "><a href="Identity & Access Management/Identity & Access Management.html"><strong aria-hidden="true">6.</strong> Identity &amp; Access Management</a></li><li class="chapter-item "><a href="Network Services/Network Services.html"><strong aria-hidden="true">7.</strong> Network Services</a></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> Notions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Notions/CI-CD.html"><strong aria-hidden="true">8.1.</strong> CI-CD</a></li><li class="chapter-item "><a href="Notions/Docker.html"><strong aria-hidden="true">8.2.</strong> Docker</a></li><li class="chapter-item "><a href="Notions/Ingestion.html"><strong aria-hidden="true">8.3.</strong> Ingestion</a></li><li class="chapter-item "><a href="Notions/Kubernetes.html"><strong aria-hidden="true">8.4.</strong> Kubernetes</a></li><li class="chapter-item "><a href="Notions/NoSQL.html"><strong aria-hidden="true">8.5.</strong> NoSQL</a></li><li class="chapter-item "><a href="Notions/Normalization-Denormalization.html"><strong aria-hidden="true">8.6.</strong> Normalization-Denormalization</a></li><li class="chapter-item "><a href="Notions/RDBMS.html"><strong aria-hidden="true">8.7.</strong> RDBMS</a></li><li class="chapter-item "><a href="Notions/REST.html"><strong aria-hidden="true">8.8.</strong> REST</a></li><li class="chapter-item "><a href="Notions/Redis.html"><strong aria-hidden="true">8.9.</strong> Redis</a></li><li class="chapter-item "><a href="Notions/Serverless.html"><strong aria-hidden="true">8.10.</strong> Serverless</a></li><li class="chapter-item "><a href="Notions/Window function.html"><strong aria-hidden="true">8.11.</strong> Window function</a></li><li class="chapter-item "><a href="Notions/failover.html"><strong aria-hidden="true">8.12.</strong> failover</a></li><li class="chapter-item "><a href="Notions/in-memory data store.html"><strong aria-hidden="true">8.13.</strong> in-memory data store</a></li><li class="chapter-item "><a href="Notions/on-premises.html"><strong aria-hidden="true">8.14.</strong> on-premises</a></li><li class="chapter-item "><a href="Notions/provisioning.html"><strong aria-hidden="true">8.15.</strong> provisioning</a></li></ol></li><li class="chapter-item "><a href="Main.html"><strong aria-hidden="true">9.</strong> Main</a></li><li class="chapter-item "><a href="SUMMARY.html"><strong aria-hidden="true">10.</strong> SUMMARY</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ai--ml-services"><a class="header" href="#ai--ml-services">AI &amp; ML Services</a></h1>
+<p>[[AI Building Blocks]] provide AI through simple REST calls<br />
+[[Cloud AutoML]] enables training models on custom datasets<br />
+[[AI Platform]] provides end-to-end ML pipelines on-premises and cloud<br />
+[[AI Hub]] is a Google hosted repository to discover, share, and deploy ML models. <em>It is a collection of artifacts and various resourses that can be shared</em></p>
+<p><img src="AI%20&amp;%20ML%20Services/../Images/MLAI_usecases.png" alt="&quot;MLAI_usecases.png&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ai-building-blocks"><a class="header" href="#ai-building-blocks">AI Building Blocks</a></h1>
+<p>All can be used via API </p>
+<p><img src="AI%20&amp;%20ML%20Services/../Images/BuildingBlocks.png" alt="&quot;aaa&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ai-hub"><a class="header" href="#ai-hub">AI Hub</a></h1>
+<p>Repository of plug-and-play AI Components</p>
+<p>Includes:</p>
+<ul>
+<li>Kubeflow pipeline components</li>
+<li>Jupyter</li>
+<li>Tensorflow modules</li>
+<li>VM images</li>
+<li>Trained models</li>
+</ul>
+<p>Content shared between teams</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ai-platform"><a class="header" href="#ai-platform">AI Platform</a></h1>
+<p><em>provides end-to-end ML pipelines [[on-premises]] and cloud</em></p>
+<p>For <strong>Advanced usecases</strong>: custom models</p>
+<p>Built on <strong>Kubeflow</strong>, based on [[Kubernetes]]</p>
+<p>Includes tools for:</p>
+<ul>
+<li>Data preparation</li>
+<li>training</li>
+<li>inference</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-automl"><a class="header" href="#cloud-automl">Cloud AutoML</a></h1>
+<p>Enabls <strong>train models</strong> without writing code, using them as <em>black-box</em></p>
+<h2 id="services"><a class="header" href="#services">Services</a></h2>
+<p>Sight:</p>
+<ul>
+<li>Vision</li>
+<li>Video Intelligence</li>
+</ul>
+<p>Language:</p>
+<ul>
+<li>NLP</li>
+</ul>
+<p>Structure Data</p>
+<ul>
+<li>Tabular data</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="compute-services"><a class="header" href="#compute-services">Compute Services</a></h1>
+<p>Where code is <strong>deployed</strong> and <strong>executed</strong> </br></p>
+<ul>
+<li><strong>Serverless environment</strong></li>
+</ul>
+<p>Choices:</p>
+<ul>
+<li>[[App Engine]]: fully managed platform as a service (PaaS)</li>
+<li>[[Compute Engine]]: IaaS. Provides configurable VMs</li>
+<li>[[Kubernetes Engine]]: orchestration (containers)</li>
+<li>[[Cloud Functions]]: functions as a service (FaaS)</li>
+</ul>
+<h2 id="use-cases"><a class="header" href="#use-cases">Use cases</a></h2>
+<p><img src="Compute%20Services/../Images/comp-services-use-cases.png" alt="&quot;alt&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="app-engine"><a class="header" href="#app-engine">App Engine</a></h1>
+<p>Fully managed platform: no need to deal with provisioning/configurating/scaling/managing/securing the platform.</p>
+<p>Just: bring code -&gt; deploy -&gt; scale</p>
+<p>Available in 2 environments:</p>
+<ul>
+<li><strong>Standard</strong>: runs in a <u>sandbox</u> <span class="commento">$\sim$ with limitations</span></li>
+<li><strong>Flexible</strong>: 
+<ul>
+<li>maximum control</li>
+<li>uses [[Docker]] to deploy and scale</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-functions"><a class="header" href="#cloud-functions">Cloud Functions</a></h1>
+<p><strong>[[Serverless]]</strong> execution environment.</p>
+<p>It is fundamentally different from App Engine, Compute Engine, [[Kubernetes]] engine.</p>
+<p><strong>Cloud functions</strong> are written as functions with a well defined entrypoint and returning , deploying with no changes.</p>
+<p>Tipically serverless compute environments <strong>respond to events</strong> via ==triggers==. They run like a daemon</p>
+<p><img src="Compute%20Services/../Images/CloudFunctions.png" alt="&quot;alt&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="compute-engine"><a class="header" href="#compute-engine">Compute Engine</a></h1>
+<ul>
+<li>Various fully configurable VMs</li>
+<li><strong>Persistence</strong> is additional</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kubernetes-engine-gke"><a class="header" href="#kubernetes-engine-gke">Kubernetes Engine (GKE)</a></h1>
+<p>Managed environment for deploying containerzed apps managed by [[Kubernetes]]</p>
+<pre><code class="language-mermaid">graph LR
+
+ A[Container IMG] --&gt;|packaging| B(Kubernetes artifacts)
+
+ --&gt;|deploy| C[Cluster]
+
+ --&gt; E[Scale]
+
+</code></pre>
+<p>Provides automatic:</p>
+<ul>
+<li>scaling</li>
+<li>upgrades</li>
+<li>repair</li>
+</ul>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
+<h3 id="cluster"><a class="header" href="#cluster">Cluster</a></h3>
+<p>group of machines called <em>nodes</em> that run containerized applications has at least 1 [[#Worker node]]</p>
+<p>When Launching a cluster, GKE has 2 elements:</p>
+<ul>
+<li>[[#Control plane]] (managed)</li>
+<li>data plane</li>
+</ul>
+<h3 id="worker-node"><a class="header" href="#worker-node">Worker node</a></h3>
+<p>hosts [[#pod]] that are the components of application's workload</p>
+<h3 id="pod"><a class="header" href="#pod">Pod</a></h3>
+<p>A set of running containers in your cluster</p>
+<h3 id="control-plane"><a class="header" href="#control-plane">Control plane</a></h3>
+<p>Container's orchestration layer that exposes:</p>
+<ul>
+<li>API</li>
+<li>Interfaces to define/deploy/manage the lifecycle of containers</li>
+</ul>
+<p>Manages [[#Worker node]]s and [[#Pod]]s in the [[#Cluster]]</p>
+<p>In Production environments runs on multiple computers.</p>
+<p><img src="Compute%20Services/../../Images/Kubernetes.png" alt="&quot;alt&quot;" /></p>
+<h3 id="node-pool"><a class="header" href="#node-pool">Node pool</a></h3>
+<p>GKE’s <strong>unique feature</strong>: mixes homogeneous (with same configuration) VMs.</p>
+<p>When creating a cluster, a node pool is created.
+Then you can add additional nodepools to the cluster <em>es. If you need more power</em></p>
+<p>You can create/upgrade and delete nodespools without affecting the cluster.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-analytics-services"><a class="header" href="#data-analytics-services">Data Analytics Services</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bigquery"><a class="header" href="#bigquery">BigQuery</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="storage--database-services"><a class="header" href="#storage--database-services">Storage &amp; Database Services</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="database_services"><a class="header" href="#database_services">database_services</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="architecture"><a class="header" href="#architecture">Architecture</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="automatic-schema-detection"><a class="header" href="#automatic-schema-detection">Automatic schema detection</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="best-practices"><a class="header" href="#best-practices">Best practices</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-streaming-data-pipelines"><a class="header" href="#build-streaming-data-pipelines">Build Streaming data pipelines</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cli"><a class="header" href="#cli">CLI</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="caching"><a class="header" href="#caching">Caching</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clustered-tables"><a class="header" href="#clustered-tables">Clustered Tables</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="copying-dataset"><a class="header" href="#copying-dataset">Copying dataset</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create--query-permanent-table-on-cloud-storage-bucket"><a class="header" href="#create--query-permanent-table-on-cloud-storage-bucket">Create &amp; Query Permanent Table on Cloud Storage bucket</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create-cloud-storage-bucket"><a class="header" href="#create-cloud-storage-bucket">Create Cloud Storage bucket</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="designing-efficient-schemas"><a class="header" href="#designing-efficient-schemas">Designing Efficient Schemas</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="example-of-end-to-end-data-pipeline"><a class="header" href="#example-of-end-to-end-data-pipeline">Example of End-to-end Data Pipeline</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="execution-plan"><a class="header" href="#execution-plan">Execution Plan</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="external-data-source-limitations"><a class="header" href="#external-data-source-limitations">External data source Limitations</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="field-partition"><a class="header" href="#field-partition">Field partition</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ingestion-time-partition-tables"><a class="header" href="#ingestion-time-partition-tables">Ingestion time partition tables</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="managing-access"><a class="header" href="#managing-access">Managing access</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="manual-operations-on-table"><a class="header" href="#manual-operations-on-table">Manual operations on Table</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="materialized-views"><a class="header" href="#materialized-views">Materialized Views</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="maximum-bytes-billed"><a class="header" href="#maximum-bytes-billed">Maximum bytes billed</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="native-operations-on-table-for-schema-change"><a class="header" href="#native-operations-on-table-for-schema-change">Native operations on Table for Schema change</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pricing"><a class="header" href="#pricing">Pricing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python-lib"><a class="header" href="#python-lib">Python lib</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="query-settings"><a class="header" href="#query-settings">Query settings</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="saved-queries"><a class="header" href="#saved-queries">Saved queries</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scheduled-queries"><a class="header" href="#scheduled-queries">Scheduled queries</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="streaming-data"><a class="header" href="#streaming-data">Streaming data</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="table-partitioning"><a class="header" href="#table-partitioning">Table partitioning</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ui"><a class="header" href="#ui">UI</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="views"><a class="header" href="#views">Views</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="when-to-use-clustering-or-partitioning-or-both"><a class="header" href="#when-to-use-clustering-or-partitioning-or-both">When to use Clustering or Partitioning or Both</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wildcards"><a class="header" href="#wildcards">Wildcards</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-dataflow"><a class="header" href="#cloud-dataflow">Cloud Dataflow</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-datalab"><a class="header" href="#cloud-datalab">Cloud Datalab</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-dataproc"><a class="header" href="#cloud-dataproc">Cloud Dataproc</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-pub-sub"><a class="header" href="#cloud-pub-sub">Cloud Pub Sub</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="devops-services"><a class="header" href="#devops-services">DevOps Services</a></h1>
+<p>Tools and frameworks for <strong>automation</strong><br />
+[[Cloud Source Repositories]] store and track source code<br />
+[[Cloud Build ]]automates continuous integration and deployment<br />
+[[Container Registry]] acts as the central repository for storing, securing, and managing [[Docker]] container images<br />
+IDE and tools integration enables developer productivity</p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<p>[[Example1]]</p>
+<h2 id="use-cases-1"><a class="header" href="#use-cases-1">Use Cases</a></h2>
+<p><img src="DevOps%20Services/../Images/UseCases.png" alt="&quot;alt&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-build"><a class="header" href="#cloud-build">Cloud Build</a></h1>
+<p>[[CI-CD]] tool. It <strong>builds and packs</strong> the application.</p>
+<p>Supports <strong>building code in any language</strong></p>
+<p>Can create <strong>custom workflows</strong> to deploy across multiple target environments.</p>
+<p>Also supports <strong>native [[Docker]] integration</strong> with automate deployment to [[Kubernetes]] and GKE</p>
+<p>It <strong>identifies vulnerabilities</strong> </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-source-repositories"><a class="header" href="#cloud-source-repositories">Cloud Source Repositories</a></h1>
+<p>Acts as a scalable <strong>Git repository</strong></p>
+<p><strong>Extends</strong> standard Git workflow to [[Cloud Build]], [[Cloud Pub Sub]] and [[Compute Services]]</p>
+<p>Has triggers to <strong>automatically</strong> build, test and deploy code</p>
+<p>Regex can be used for searching</p>
+<p>Useful for <strong>mantaining all the lifecycle</strong> of an application within GCP: from storing code to deployng and iterating over code multiple times.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="container-registry"><a class="header" href="#container-registry">Container Registry</a></h1>
+<p>Stores [[Docker]] images and artifacts in a <strong>centralized registry</strong>.</p>
+<p>Stores images close to GCE, GKE and Kubernets <strong>clusters</strong></p>
+<p>Supports Role-based access control</p>
+<p>Detects vulnerabilities in the early stages of software deployment and <strong>locks down</strong> the vulnerable ones.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>Enabling service</p>
+<pre><code class="language-ignore">gcloud services enable containerregistry.googleapis.com  
+</code></pre>
+<p>Initializing ProjectID</p>
+<pre><code class="language-ignore">export PROJECT_ID=&lt;PROJECT ID&gt; # Replace this with your GCP Project
+ID  
+</code></pre>
+<p>Getting Busybox</p>
+<pre><code class="language-ignore">docker pull busybox  
+docker images  
+</code></pre>
+<p>Creating code (using vim Dockerfile)</p>
+<pre><code class="language-ignore">cat &lt;&lt;EOF &gt;&gt;Dockerfile  
+from busybox:latest  
+CMD [&quot;date&quot;]  
+EOF
+</code></pre>
+<p>Building</p>
+<pre><code class="language-ignore">docker build . -t mybusybox  
+</code></pre>
+<p>Tagging following GCP Container Registry convention</p>
+<pre><code class="language-ignore">docker tag mybusybox gcr.io/$PROJECT_ID/mybusybox:latest  
+</code></pre>
+<p>Running</p>
+<pre><code class="language-ignore">docker run gcr.io/$PROJECT_ID/mybusybox:latest  
+</code></pre>
+<p>Wiring credentials of GCP Container Registry with Docker</p>
+<pre><code class="language-ignore">gcloud auth configure-docker  
+</code></pre>
+<p>Pushing image to container registry</p>
+<pre><code class="language-ignore">docker push gcr.io/$PROJECT_ID/mybusybox:latest
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="project"><a class="header" href="#project">Project</a></h1>
+<p>Is a critical, <strong>billable unit</strong> with credit associated.
+It is not a resource, just a <strong>logical grouping</strong></p>
+<p>Every [[Resource]] belongs to a <strong>project</strong>.
+May be organized in <strong>folders</strong>.
+Organization is an entity <strong>at the top</strong> of the hierarchy. (Only visible if using <em>GSuite</em>, otherwise is not visible)</p>
+<p><img src="GCP-Notions/../../Images/Project_Hierarchy.png" alt="&quot;alt&quot;" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resource"><a class="header" href="#resource">Resource</a></h1>
+<p>When launching, it results a creation of <strong>resources</strong></p>
+<p><em>i.e. VM in Compute Engine
+app in App Engine
+StorageBucket in Google Sources</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-iam"><a class="header" href="#cloud-iam">Cloud IAM</a></h1>
+<p>Defines <strong>who</strong>(<span class="green">identity</span>) and <strong>what</strong> (<span class="orange">role</span>) for <strong>which</strong> <em><strong>resource</strong></em></p>
+<p>Based on <strong>least privilege principle</strong>: meaning default deny</p>
+<p>IAM policy: binds identity to roles which contains permissions. Member is assocated to a role and inherits all the privileges</p>
+<h2 id="identity"><a class="header" href="#identity">Identity</a></h2>
+<p>Associated with users or members accessing to resources. Is based on:</p>
+<ul>
+<li>Google account</li>
+<li>service account</li>
+<li>google group</li>
+<li>Gsuite domain</li>
+<li>Cloud Identity domain</li>
+</ul>
+<p>Has implicit aliases:</p>
+<ul>
+<li>allAuthenticatedUsers</li>
+<li>allUsers</li>
+</ul>
+<h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
+<p>Determine the operations performed on a resource.
+Corresponds to REST api: the're a <strong>mapping</strong> to REST APIs exposed by GCP resources
+Can't be assigned directly to members/users, instead are grouped to a role</p>
+<h2 id="roles"><a class="header" href="#roles">Roles</a></h2>
+<h3 id="primitives"><a class="header" href="#primitives">Primitives</a></h3>
+<ol>
+<li>Owner</li>
+<li>Editor</li>
+<li>Viewer</li>
+</ol>
+<h3 id="predefined"><a class="header" href="#predefined">Predefined</a></h3>
+<p>related to GCP services
+They're assigned to every resource or service</p>
+<h3 id="custom-roles"><a class="header" href="#custom-roles">Custom roles</a></h3>
+<p>Collection of assorted set of permissions
+Provides very fine-grades access to resources</p>
+<h2 id="service-accounts"><a class="header" href="#service-accounts">Service Accounts</a></h2>
+<p>Special Google account that belongs to an application or VM
+ex the app programmatically creates resources: it needs permissions to do that</p>
+<p>Identified by unique email address + a <strong>token</strong> that associates the resource with the rest of GPC services</p>
+<p>There are 2 types:</p>
+<ul>
+<li>User managed</li>
+<li>Google managed</li>
+</ul>
+<p>Each one is associated with one or more roles</p>
+<h2 id="where-you-use-iam"><a class="header" href="#where-you-use-iam">Where you use IAM?</a></h2>
+<p>When sharing GCP resources with fine-grained control
+Selectively allow/deny permissions to individual resources
+Define custom reoles specific to a team 
+Enable authentication of applications trough service accounts</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network-services"><a class="header" href="#network-services">Network Services</a></h1>
+<p>Relies on Google's global network.</p>
+<ul>
+<li>Has load balancers</li>
+<li>is a Virtual Prvate Cloud</li>
+</ul>
+<h2 id="load-balancing"><a class="header" href="#load-balancing">Load balancing</a></h2>
+<p>Can route requests also across the globe</p>
+<p>2 types:</p>
+<ul>
+<li><strong>HTTPS</strong>: Global load balancing</li>
+<li><strong>Network</strong>: endpoints of the same <u>region</u></li>
+</ul>
+<p>Both can be internal or external for <em>scalability</em></p>
+<p>![&quot;alt&quot;](../../Images/Load Balancing.png)</p>
+<h2 id="virtual-prvate-cloud"><a class="header" href="#virtual-prvate-cloud">Virtual Prvate Cloud</a></h2>
+<p>Software-defined network providing private networking for VMs.</p>
+<p>It is useful for <strong>sensitive sources</strong></p>
+<p>To enable private networking (=an isolated space) within the public cloud and deploy applications/resources in that zone.</p>
+<p>Isolates VMs running inside the VPCs</p>
+<ul>
+<li>Is a <u>global resource</u> visible from any region</li>
+<li>Each one is <u>logically</u> isolated from the others</li>
+<li>Traffic within networs can be restricted via firewall</li>
+<li>Has private DNS</li>
+<li>Multiple VPCs can be connected trough <strong>peering</strong></li>
+</ul>
+<h2 id="hybrid-connectivity"><a class="header" href="#hybrid-connectivity">Hybrid Connectivity</a></h2>
+<p>Extending local datacenter <strong>steamlessly</strong> to GCP infrastructure</p>
+<p>3 services:</p>
+<ul>
+<li><strong>Cloud interconnect</strong>: Extends on-premises network via dedicated (<em>Google</em>) or parthner interconnect.</li>
+<li><strong>Cloud VPN</strong>: for basic secure connectivity</li>
+<li><strong>Peering</strong>: Direct access to Google Cloud resources with reduced internet edges fee</li>
+</ul>
+<p>![&quot;alt&quot;](../../Images/Pasted image 20211230171158.png)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="continuous-integration---continuous-delivery"><a class="header" href="#continuous-integration---continuous-delivery">Continuous Integration - Continuous Delivery</a></h1>
+<p>CI/CD is a method to frequently deliver apps to customers by introducing automation into the stages of app development.</p>
+<p>CI/CD is a solution to the problems integrating new code can cause for development and operations teams (AKA &quot;integration hell&quot;).</p>
+<p>Specifically, CI/CD introduces ongoing automation and continuous monitoring throughout the lifecycle of apps, from integration and testing phases to delivery and deployment.</p>
+<p>Taken together, these connected practices are often referred to as a &quot;CI/CD pipeline&quot;</p>
+<h2 id="continuous-integration"><a class="header" href="#continuous-integration">Continuous Integration</a></h2>
+<p>Means new code changes to an app are regularly built, tested, and merged to a shared repository.</p>
+<p>It’s a solution to the problem of having too many branches of an app in development at once that might conflict with each other.</p>
+<h2 id="continuous-delivery--continuous-deployment"><a class="header" href="#continuous-delivery--continuous-deployment">Continuous Delivery / Continuous Deployment</a></h2>
+<p>Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.</p>
+<h3 id="continuous-delivery"><a class="header" href="#continuous-delivery">Continuous Delivery</a></h3>
+<p>usually means a developer’s changes to an application are automatically bug tested and uploaded to a repository (like GitHub or a container registry), where they can then be deployed to a live production environment by the operations team.</p>
+<p>It’s an answer to the problem of poor visibility and communication between dev and business teams. To that end, the purpose of continuous delivery is to ensure that it takes minimal effort to deploy new code.</p>
+<h3 id="continuous-deployment-the-other-possible-cd"><a class="header" href="#continuous-deployment-the-other-possible-cd">Continuous deployment (the other possible &quot;CD&quot;)</a></h3>
+<p>can refer to automatically releasing a developer’s changes from the repository to production, where it is usable by customers.</p>
+<p>It addresses the problem of overloading operations teams with manual processes that slow down app delivery.</p>
+<p>It builds on the benefits of continuous delivery by automating the next stage in the pipeline.</p>
+<p><img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/ci-cd-flow-desktop.png?itok=2EX0MpQZ" alt="CI/CD Flow" title="CI/CD Flow" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker"><a class="header" href="#docker">Docker</a></h1>
+<p>Docker is an open source platform for building, deploying, and managing containerized applications.</p>
+<p>It enables developers to <u>package applications</u> into <strong>containers</strong>: standardized executable components combining:</p>
+<ul>
+<li>application source code</li>
+<li>the operating system (OS) libraries</li>
+<li>dependencies 
+Required to run that code in <u>any environment</u>.</li>
+</ul>
+<blockquote>
+<p>containers can be created without Docker, but the platform makes it easier, simpler, and safer to build, deploy and manage containers</p>
+</blockquote>
+<p>Docker is essentially a <strong>toolkit</strong> that enables developers to build, deploy, run, update, and stop containers using simple commands and work-saving automation through a single API.</p>
+<h2 id="how-containers-work"><a class="header" href="#how-containers-work">How containers work</a></h2>
+<p>Containers are made possible by <strong>process isolation</strong> and <strong>virtualization</strong> capabilities built into the <u>Linux kernel</u>.</p>
+<p>These capabilities enable multiple application components to <strong>share the resources</strong> of a single instance <strong>of the host operating system</strong> as (much) <strong>same as hypervisor enables multiple virtual machines (VMs)</strong> to share the CPU, memory and other resources of a single hardware server. </p>
+<p>As a result, container technology offers all the functionality and benefits of VMs - <em>including application isolation, cost-effective scalability, and disposability</em> - plus important additional advantages:</p>
+<ul>
+<li><strong>Lighter weight:</strong> Unlike VMs, containers don’t carry the payload of an entire OS instance and hypervisor; they include only the OS processes and dependencies necessary to execute the code.</li>
+<li><strong>Greater resource efficiency</strong></li>
+<li><strong>Improved developer productivity</strong>: Compared to VMs, containers are faster and easier to deploy, provision and restart. This makes them ideal for use in [[CI-CD]] pipelines and a better fit for development teams adopting Agile and DevOps practices.</li>
+</ul>
+<h2 id="docker-tools-and-terms"><a class="header" href="#docker-tools-and-terms">Docker tools and terms</a></h2>
+<h3 id="dockerfile"><a class="header" href="#dockerfile"><strong>DockerFile</strong></a></h3>
+<p>Every Docker container starts with a simple text file containing instructions for how to build the Docker container image. </p>
+<p><em>DockerFile</em> automates the process of Docker image creation.
+It’s essentially a list of command-line interface (CLI) instructions that Docker Engine will run in order to assemble the image.</p>
+<h3 id="docker-images"><a class="header" href="#docker-images"><strong>Docker images</strong></a></h3>
+<p><em>Docker images</em> contain executable application source code as well as all the tools, libraries, and dependencies that the application code needs to run as a container. </p>
+<p>When you run the Docker image, it becomes one <strong>instance</strong> (or multiple instances) of the container.</p>
+<h3 id="docker-containers"><a class="header" href="#docker-containers"><strong>Docker containers</strong></a></h3>
+<p>Docker containers are the live, running instances of Docker images.</p>
+<h3 id="docker-daemon"><a class="header" href="#docker-daemon"><strong>Docker daemon</strong></a></h3>
+<p>Docker daemon is a service running on your operating system. </p>
+<p>This service creates and manages your Docker images for you using the commands from the client, acting as the control center of your Docker implementation.</p>
+<h3 id="docker-registry"><a class="header" href="#docker-registry"><strong>Docker registry</strong></a></h3>
+<p>A Docker registry is a scalable open-source storage and distribution system for docker images. The registry enables you to track image versions in repositories, using tagging for identification. This is accomplished using git, a version control tool.</p>
+<h2 id="docker-deployment-and-orchestration"><a class="header" href="#docker-deployment-and-orchestration">Docker deployment and orchestration</a></h2>
+<p>To monitor and manage container lifecycles in more complex environments, you’ll need to turn to a <strong>container orchestration tool</strong>. 
+While Docker includes its own orchestration tool (called Docker Swarm), most developers choose [[Kubernetes]] instead.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-ingestion"><a class="header" href="#data-ingestion">Data Ingestion</a></h1>
+<p>Data ingestion is the process of obtaining and importing data for immediate use or storage in a database. </p>
+<p>Data can be streamed in real time or ingested in batches.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h1>
+<p>is an open source <strong>container orchestration platform</strong> that automates many of the manual processes involved in deploying, managing, and scaling containerized applications.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<ul>
+<li><strong>Controlling resource consumption</strong> by application or team</li>
+<li>Evenly spreading application load across a host infrastructure with different:
+<ul>
+<li>datacenters</li>
+<li>hardware</li>
+<li>hosting providers</li>
+</ul>
+</li>
+<li><strong>Automatically load balancing</strong> requests across the different instances of an application</li>
+<li><strong>Monitoring resource consumption and resource limits</strong> to automatically stop applications from consuming too many resources and restarting the applications again</li>
+<li><strong>Moving an application instance from one host to another</strong> if there is a shortage of resources in a host, or if the host dies</li>
+<li>Automatically <strong>leveraging additional resources</strong> made available when a new host is added to the cluster</li>
+<li>Easily performing <a href="https://medium.com/google-cloud/kubernetes-canary-deployments-for-mere-mortals-13728ce032fe">canary deployments</a> and rollbacks</li>
+</ul>
+<blockquote>
+<p><strong>Kubernetes is cloud-agnostic</strong></p>
+</blockquote>
+<p><img src="https://newrelic.com/sites/default/files/styles/1200w/public/2021-05/kubernetes_architecture-1024x649.jpeg?itok=224Yqhs6" alt="Kubernetes Architecture" /></p>
+<h2 id="kubernetes-master"><a class="header" href="#kubernetes-master">Kubernetes master</a></h2>
+<p>The Kubernetes master is the <strong>access point</strong> (or the control plane) from which administrators and other users interact with the cluster to manage the scheduling and deployment of containers. </p>
+<p>A cluster will always have at least one master, but may have more depending on the cluster’s replication pattern.</p>
+<h2 id="nodes"><a class="header" href="#nodes">Nodes</a></h2>
+<p>All nodes in a Kubernetes cluster must be configured with a container runtime, which is usually [[Docker]]. 
+The container runtime starts and manages the containers as Kubernetes deploys them to nodes in the cluster. </p>
+<p>Applications (web servers, databases, API servers, etc.) run inside the containers.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nosql"><a class="header" href="#nosql">NoSQL</a></h1>
+<h2 id="why-should-you-use-a-nosql-database"><a class="header" href="#why-should-you-use-a-nosql-database">Why should you use a NoSQL database?</a></h2>
+<p>NoSQL databases are a great fit for many modern applications such as mobile, web, and gaming that require flexible, scalable, high-performance, and highly functional databases to provide great user experiences.</p>
+<ul>
+<li><strong>Flexibility:</strong> NoSQL databases generally provide flexible schemas that enable faster and more iterative development. The flexible data model makes NoSQL databases ideal for semi-structured and unstructured data.</li>
+<li><strong>Scalability:</strong> NoSQL databases are generally designed to scale out by using distributed clusters of hardware instead of scaling up by adding expensive and robust servers. Some cloud providers handle these operations behind-the-scenes as a fully managed service.</li>
+<li><strong>High-performance:</strong> NoSQL database are optimized for specific data models and access patterns that enable higher performance than trying to accomplish similar functionality with relational databases.</li>
+<li><strong>Highly functional:</strong> NoSQL databases provide highly functional APIs and data types that are purpose built for each of their respective data models.</li>
+</ul>
+<h2 id="example-simple-book-database"><a class="header" href="#example-simple-book-database">Example: Simple book database</a></h2>
+<h3 id="relational-database"><a class="header" href="#relational-database">Relational Database</a></h3>
+<p>A book record is often dissembled (or “normalized”) and stored in <strong>separate tables</strong>
+<strong>Relationships</strong> are defined by primary and foreign key constraints.</p>
+<p>The relational model is designed to enable the database to:</p>
+<ul>
+<li>enforce referential integrity between tables in the database</li>
+<li>normalized to reduce the redundancy</li>
+<li>generally optimized for storage</li>
+</ul>
+<p><strong>Books table</strong> has columns for <strong>ISBN</strong>, <strong>Book Title</strong>, and <strong>Edition Number</strong>,
+<strong>Authors</strong> table has columns for <strong>AuthorID</strong> and <strong>Author Name</strong>, 
+<strong>Author-ISBN</strong> table has columns for <strong>AuthorID</strong> and <strong>ISBN</strong></p>
+<h3 id="nosql-1"><a class="header" href="#nosql-1">NoSQL</a></h3>
+<p>A book record is usually stored in a <strong>JSON</strong> document</p>
+<p>Data is optimized for intuitive development and horizontal scalability</p>
+<p>the item, <strong>ISBN</strong>, <strong>Book Title</strong>, <strong>Edition Number</strong>, <strong>Author Name</strong>, and <strong>AuthorID</strong> are stored as attributes in a single document</p>
+<p>-----see &quot;# SQL (relational) vs. NoSQL (nonrelational) databases&quot;  https://aws.amazon.com/nosql/?nc1=h_ls -----</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="normalization-and-denormalization-database"><a class="header" href="#normalization-and-denormalization-database">Normalization and Denormalization (database)</a></h1>
+<h2 id="normalization"><a class="header" href="#normalization">Normalization</a></h2>
+<p>Data is stored in <strong>separate logical tables</strong> and attempt to <strong>minimize redundant data</strong>. 
+We may strive to have only one copy of each piece of data in database.</p>
+<p>Usially <strong>core data</strong> is organized in one main table. Other data is on other tables.</p>
+<p><img src="Notions/../../Images/normalization.png" alt="&quot;alt&quot;" /></p>
+<p>Has the <strong><span class="red">con</span></strong> of slowing down queries .</p>
+<h2 id="denormalization"><a class="header" href="#denormalization">Denormalization</a></h2>
+<p>Denormalization is a database <strong>optimization technique</strong> in which we add redundant data to one or more tables.</p>
+<p><em><strong>Note that</strong></em> denormalization <u>does not mean not doing normalization</u>. It is an optimization technique that is applied <strong>after doing normalization</strong>.</p>
+<p><strong>Pros:</strong> </p>
+<ol>
+<li>Retrieving data is faster since we do fewer joins</li>
+<li>Queries to retrieve can be simpler(and therefore less likely to have bugs), <br />
+since we need to look at fewer tables.</li>
+</ol>
+<p><strong>Cons:</strong>  </p>
+<ol>
+<li>Updates and inserts are more expensive.</li>
+<li>Denormalization can make update and insert code harder to write.</li>
+<li>Data may be inconsistent . Which is the “correct” value for a piece of data?</li>
+<li>Data redundancy necessitates more storage.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="relational-database-management-system"><a class="header" href="#relational-database-management-system">Relational Database Management System</a></h1>
+<p>Is a Database Management System based on Relational model</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rest"><a class="header" href="#rest">REST</a></h1>
+<p>Achronym for <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer.</p>
+<p>REST is a set of <strong>architectural principles</strong> or <em><strong>guidelines</strong></em>, 
+SOAP, instead is a W3C protocol. So REST is <strong>not a protocol</strong></p>
+<p>Because it's a set of guidelines, it leaves the implementation of these recommendations to developers</p>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
+<p>When a <strong>request is sent</strong>, it is done trough <u>HTTP</u>.
+The <strong>response</strong> messages can be sent in a variety of formats: HTML, XML, plain text, and JSON.</p>
+<h2 id="restful-applications"><a class="header" href="#restful-applications">RESTful applications</a></h2>
+<p>Must follow this guidelines:</p>
+<ol>
+<li>A <strong>client-server architecture</strong> composed of clients, servers, and resources</li>
+<li><a href="https://www.redhat.com/en/topics/cloud-native-apps/stateful-vs-stateless">Stateless</a> client-server communication = <u>no client content is stored</u> on the server between requests. 
+Information about the session’s state is instead held with the client.</li>
+<li><strong>Cacheable data</strong> to eliminate the need for some client-server interactions</li>
+<li>A <strong>uniform interface between components</strong> so that <u>information is transferred in a standardized form</u> instead of specific to an application’s needs.</li>
+<li>A l<strong>ayered system constraint</strong>, where client-server interactions can be mediated by hierarchical layers.</li>
+<li><strong>Code on demand</strong>, allowing servers to extend the functionality of a client by <u>transferring executable code</u> (though also reducing visibility, making this an optional guideline).</li>
+</ol>
+<h2 id="soap"><a class="header" href="#soap">SOAP</a></h2>
+<p>SOAP is a standard protocol, it imposes built-in rules that increase its complexity and overhead, which can lead to longer page load times.</p>
+<p>However, these standards also offer <strong>built-in compliances</strong> that can make it <strong>preferable for enterprise scenarios</strong>.
+These include security, atomicity, consistency, isolation, and durability (ACID), which is a set of properties for ensuring reliable database transactions.</p>
+<p>Common web service specifications include:</p>
+<ul>
+<li><strong>Web services security (WS-security)</strong>: Standardizes how messages are secured and transferred through unique identifiers called tokens.</li>
+<li><strong>WS-ReliableMessaging</strong>: Standardizes error handling between messages transferred across unreliable IT infrastructure.</li>
+<li><strong>Web services addressing (WS-addressing)</strong>: Packages routing information as metadata within SOAP headers, instead of maintaining such information deeper within the network.</li>
+<li><strong>Web services description language (WSDL)</strong>: Describes what a web service does, and where that service begins and ends.</li>
+</ul>
+<h2 id="rest-vs-soap"><a class="header" href="#rest-vs-soap">REST vs SOAP</a></h2>
+<p><strong>REST</strong> APIs are <strong>lightweight</strong>, making them ideal for newer contexts like IOT, mobile application development, and serverless computing. </p>
+<p><strong>SOAP</strong> web services offer <strong>built-in security</strong> and transaction compliance that align with many enterprise needs, but that also makes them <strong>heavier</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="serverless-computing"><a class="header" href="#serverless-computing">Serverless Computing</a></h1>
+<p>is a cloud computing execution model in which the cloud provider allocates <strong>machine resources on demand</strong>, taking care of the servers on behalf of their customers.</p>
+<p>No need to provision or configure resources beforehand.</p>
+<p>&quot;Serverless&quot; is a misnomer: servers are still used by cloud service providers to execute code for developers.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sql-window-function"><a class="header" href="#sql-window-function">SQL Window Function</a></h1>
+<p>Performs calculations on a set of rows that are related together. </p>
+<p>But, <u>unlike the aggregate functions</u>, windowing functions <strong>do not collapse the result</strong> of the rows into a single value. 
+Instead, all the rows <strong>maintain their original identity</strong> and the calculated <strong>result is returned for every row</strong>.</p>
+<p><img src="Notions/../../Images/SQL-Window_fn.png" alt="&quot;alt&quot;" /></p>
+<h2 id="windowing-with-partition-by"><a class="header" href="#windowing-with-partition-by">Windowing with PARTITION BY</a></h2>
+<p>The <strong>PARTITION BY</strong> clause is used in conjunction with the OVER clause. It breaks up the rows into different partitions. These partitions are then acted upon by the window function.</p>
+<p>For example, to display the total salary per job category for all the rows we would have to modify our original SQL query as follows:</p>
+<p><img src="Notions/../../Images/SQL-window_fn2.png" alt="&quot;alt&quot;" /></p>
+<h2 id="arranging-rows-within-partitions"><a class="header" href="#arranging-rows-within-partitions">Arranging Rows within Partitions</a></h2>
+<p>We know that to arrange rows in a table, we can use the ORDER BY clause. So, to arrange rows within each partition, we have to modify the OVER clause with the ORDER BY clause.</p>
+<p><img src="Notions/../../Images/SQL-window_fn3.png" alt="&quot;alt&quot;" /></p>
+<h2 id="window-functions"><a class="header" href="#window-functions">Window functions</a></h2>
+<p>https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/#h2_10</p>
+<div style="break-before: page; page-break-before: always;"></div><p>Failover is switching to a redundant or standby computer server, system, hardware component or network upon the failure or abnormal termination of the previously active application, server, system, hardware component, or network in a computer network.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="in-memory-database"><a class="header" href="#in-memory-database">In-Memory Database</a></h1>
+<p>Are purpose-built (means ad-hoc built) relying primarly on memory.
+Are designed to enable minimal response times by eliminating the need to access disks.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="on-premises-software"><a class="header" href="#on-premises-software">on-premises software</a></h1>
+<p>in contrapposizione con Saas</p>
+<p>Is installed and runs on computers <strong>locally</strong> on the premises of the person or organization using the software, rather than at a remote facility such as a server farm or cloud. </p>
+<p>The software consists of database and modules that are combined to particularly serve the unique needs of the large organizations regarding the automation of corporate-wide business system and its functions.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="provisioning"><a class="header" href="#provisioning">Provisioning</a></h1>
+<p>Provisioning is the process of <strong>setting up IT infrastructure</strong>. 
+It can also refer to the steps required to manage access to data and resources, and make them available to users and systems.</p>
+<h2 id="server-provisioning"><a class="header" href="#server-provisioning">Server provisioning</a></h2>
+<p>Ss the process of setting up a server to be used in a network based on required resources. </p>
+<p>Provisioning can encompass all of the operations needed to create a new machine and bring it to a working state, and includes defining the desired state of the system.</p>
+<p>Includes:</p>
+<ul>
+<li>setting up the physical hardware in a datacenter,</li>
+<li>installing and configuring software,including the operating system and applications</li>
+<li>connecting it to middleware, networks, and storage.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="google-cloud-platform"><a class="header" href="#google-cloud-platform">Google Cloud Platform</a></h1>
+<h2 id="gcp-vs-others"><a class="header" href="#gcp-vs-others">GCP vs others</a></h2>
+<p>!</p>
+<h2 id="network"><a class="header" href="#network">Network</a></h2>
+<p>GCP is divided in <strong>regions</strong> -&gt; <strong>zones</strong> -&gt; <strong>network edge locations</strong> </p>
+<h2 id="the-big-picture"><a class="header" href="#the-big-picture">The Big picture</a></h2>
+<p><img src="Images/GCP_BigPicture.png" alt="&quot;alt&quot;" /></p>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p>When launching, it results a creation of [[Resource]]s</p>
+<h2 id="projects"><a class="header" href="#projects">Projects</a></h2>
+<p>[[Project]] is a critical, <strong>billable unit</strong> with credit associated.</p>
+<h2 id="interacting-with-gcp"><a class="header" href="#interacting-with-gcp">Interacting with GCP</a></h2>
+<p>Can be done via:</p>
+<ul>
+<li>Web Console</li>
+<li>Cloud Shell / Cloud SDK</li>
+<li>Mobile App</li>
+<li>CLI (DevOps)</li>
+<li>[[REST]] API</li>
+</ul>
+<p>![[Compute Services]]</p>
+<p>![[Storage &amp; Database Services]]</p>
+<p>![[Network Services]]</p>
+<h1 id="security--identity-services"><a class="header" href="#security--identity-services">Security &amp; Identity Services</a></h1>
+<p>[[Identity &amp; Access Management]]
+[[database_services]]
+[[Data Analytics Services]]
+[[AI &amp; ML Services]]
+[[DevOps Services]]</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
+<ul>
+<li><a href="AI%20&amp;%20ML%20Services/AI%20&amp;%20ML%20Services.html">AI &amp; ML Services</a>
+<ul>
+<li><a href="AI%20&amp;%20ML%20Services/AI%20Building%20Blocks.html">AI Building Blocks</a></li>
+<li><a href="AI%20&amp;%20ML%20Services/AI%20Hub.html">AI Hub</a></li>
+<li><a href="AI%20&amp;%20ML%20Services/AI%20Platform.html">AI Platform</a></li>
+<li><a href="AI%20&amp;%20ML%20Services/Cloud%20AutoML.html">Cloud AutoML</a></li>
+</ul>
+</li>
+<li><a href="Compute%20Services/Compute%20Services.html">Compute Services</a>
+<ul>
+<li><a href="Compute%20Services/App%20Engine.html">App Engine</a></li>
+<li><a href="Compute%20Services/Cloud%20Functions.html">Cloud Functions</a></li>
+<li><a href="Compute%20Services/Compute%20Engine.html">Compute Engine</a></li>
+<li><a href="Compute%20Services/Kubernetes%20Engine.html">Kubernetes Engine</a></li>
+</ul>
+</li>
+<li><a href="Data_Analytics_Services/Data%20Analytics%20Services.html">Data Analytics Services</a>
+<ul>
+<li>
+<p><a href="Data_Analytics_Services/BigQuery.html">BigQuery</a></p>
+<ul>
+<li><a href="Data_Analytics_Services/BigQuery/Storage%20&amp;%20Database%20Services/Storage%20&amp;%20Database%20Services.html">Storage &amp; Database Services</a>
+<ul>
+<li><a href="Data_Analytics_Services/BigQuery/Storage%20&amp;%20Database%20Services/database_services.html">database_services</a></li>
+</ul>
+</li>
+<li><a href="Data_Analytics_Services/BigQuery/Architecture.html">Architecture</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Automatic%20schema%20detection.html">Automatic schema detection</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Best%20practices.html">Best practices</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Build%20Streaming%20data%20pipelines.html">Build Streaming data pipelines</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/CLI.html">CLI</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Caching.html">Caching</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Clustered%20Tables.html">Clustered Tables</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Copying%20dataset.html">Copying dataset</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Create%20&amp;%20Query%20Permanent%20Table%20on%20Cloud%20Storage%20bucket.html">Create &amp; Query Permanent Table on Cloud Storage bucket</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Create%20Cloud%20Storage%20bucket.html">Create Cloud Storage bucket</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Designing%20Efficient%20Schemas.html">Designing Efficient Schemas</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Example%20of%20End-to-end%20Data%20Pipeline.html">Example of End-to-end Data Pipeline</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Execution%20Plan.html">Execution Plan</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/External%20data%20source%20Limitations.html">External data source Limitations</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Field%20partition.html">Field partition</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Ingestion%20time%20partition%20tables.html">Ingestion time partition tables</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Managing%20access.html">Managing access</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Manual%20operations%20on%20Table.html">Manual operations on Table</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Materialized%20Views.html">Materialized Views</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Maximum%20bytes%20billed.html">Maximum bytes billed</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Native%20operations%20on%20Table%20for%20Schema%20change.html">Native operations on Table for Schema change</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Pricing.html">Pricing</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Python%20lib.html">Python lib</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Query%20settings.html">Query settings</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Saved%20queries.html">Saved queries</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Scheduled%20queries.html">Scheduled queries</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Streaming%20data.html">Streaming data</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Table%20partitioning.html">Table partitioning</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/UI.html">UI</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Views.html">Views</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/When%20to%20use%20Clustering%20or%20Partitioning%20or%20Both.html">When to use Clustering or Partitioning or Both</a></li>
+<li><a href="Data_Analytics_Services/BigQuery/Wildcards.html">Wildcards</a></li>
+</ul>
+</li>
+<li>
+<p><a href="Data_Analytics_Services/Cloud%20Dataflow.html">Cloud Dataflow</a></p>
+</li>
+<li>
+<p><a href="Data_Analytics_Services/Cloud%20Datalab.html">Cloud Datalab</a></p>
+</li>
+<li>
+<p><a href="Data_Analytics_Services/Cloud%20Dataproc.html">Cloud Dataproc</a></p>
+</li>
+<li>
+<p><a href="Data_Analytics_Services/Cloud%20Pub%20Sub.html">Cloud Pub Sub</a></p>
+</li>
+</ul>
+</li>
+<li><a href="DevOps%20Services/DevOps%20Services.html">DevOps Services</a>
+<ul>
+<li><a href="DevOps%20Services/Cloud%20Build.html">Cloud Build</a></li>
+<li><a href="DevOps%20Services/Cloud%20Source%20Repositories.html">Cloud Source Repositories</a></li>
+<li><a href="DevOps%20Services/Container%20Registry.html">Container Registry</a></li>
+<li><a href="DevOps%20Services/Example1.html">Example1</a></li>
+</ul>
+</li>
+<li><a href="">GCP-Notions</a>
+<ul>
+<li><a href="GCP-Notions/Project.html">Project</a></li>
+<li><a href="GCP-Notions/Resource.html">Resource</a></li>
+</ul>
+</li>
+<li><a href="Identity%20&amp;%20Access%20Management/Identity%20&amp;%20Access%20Management.html">Identity &amp; Access Management</a></li>
+<li><a href="Network%20Services/Network%20Services.html">Network Services</a></li>
+<li><a href="">Notions</a>
+<ul>
+<li><a href="Notions/CI-CD.html">CI-CD</a></li>
+<li><a href="Notions/Docker.html">Docker</a></li>
+<li><a href="Notions/Ingestion.html">Ingestion</a></li>
+<li><a href="Notions/Kubernetes.html">Kubernetes</a></li>
+<li><a href="Notions/NoSQL.html">NoSQL</a></li>
+<li><a href="Notions/Normalization-Denormalization.html">Normalization-Denormalization</a></li>
+<li><a href="Notions/RDBMS.html">RDBMS</a></li>
+<li><a href="Notions/REST.html">REST</a></li>
+<li><a href="Notions/Redis.html">Redis</a></li>
+<li><a href="Notions/Serverless.html">Serverless</a></li>
+<li><a href="Notions/Window%20function.html">Window function</a></li>
+<li><a href="Notions/failover.html">failover</a></li>
+<li><a href="Notions/in-memory%20data%20store.html">in-memory data store</a></li>
+<li><a href="Notions/on-premises.html">on-premises</a></li>
+<li><a href="Notions/provisioning.html">provisioning</a></li>
+</ul>
+</li>
+<li><a href="Main.html">Main</a></li>
+<li><a href="SUMMARY.html">SUMMARY</a></li>
+</ul>
+
+                    </main>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

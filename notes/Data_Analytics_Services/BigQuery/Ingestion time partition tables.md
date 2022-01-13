@@ -1,0 +1,1 @@
+# Ingestion time partition tables

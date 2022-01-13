@@ -1,1 +1,0 @@
-# Manual operations on Table

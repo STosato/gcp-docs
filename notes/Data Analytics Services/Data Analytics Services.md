@@ -9,5 +9,7 @@ Uses [[Cloud Pub Sub]] for ingesting data at scale
 
 [[Big Query]]
 
+[[Data Studio]]
+
 ## Use Cases
 !["alt"](../Images/DAS_usecases.png)

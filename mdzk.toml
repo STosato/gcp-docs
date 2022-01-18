@@ -13,3 +13,6 @@ enable = true
 
 [output.html.search]
 enable = true
+
+[output.html]
+mathjax-support = true

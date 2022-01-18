@@ -1,9 +1,0 @@
-[book]
-authors = ["Carlo Veronesi"]
-language = "en"
-multilingual = false
-src = "notes"
-title = "GCP notes"
-
-[output.html.fold]
-enable = true

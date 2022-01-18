@@ -1,4 +1,4 @@
-name: CI
+name: CI-mdzk
 
 on:
   push:
@@ -15,9 +15,9 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: (test -x $HOME/.cargo/bin/mdbook || cargo install mdbook)
-      - run: mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
+      - run: (test -x $HOME/.cargo/bin/mdzk || cargo install mdzk --version 0.4.3)
+      - run: mdzk build
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: book # The folder the action should deploy.
+          folder: html # The folder the action should deploy.

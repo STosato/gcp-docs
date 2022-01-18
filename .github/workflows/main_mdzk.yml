@@ -15,7 +15,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: (test -x $HOME/.cargo/bin/mdzk || cargo install mdzk@0.4.3)
+      - run: (test -x $HOME/.cargo/bin/mdzk || cargo install mdzk --version 0.4.3)
       - run: mdzk build
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:

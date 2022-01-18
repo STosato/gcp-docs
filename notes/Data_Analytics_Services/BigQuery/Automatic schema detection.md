@@ -1,1 +1,0 @@
-# Automatic schema detection

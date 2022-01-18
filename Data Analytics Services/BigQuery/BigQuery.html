@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook and mdzk -->
+        <meta charset="UTF-8">
+        <title>BigQuery - GCP notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../AI & ML Services/AI & ML Services.html"><strong aria-hidden="true">1.</strong> AI &amp; ML Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../AI & ML Services/AI Building Blocks.html"><strong aria-hidden="true">1.1.</strong> AI Building Blocks</a></li><li class="chapter-item "><a href="../../AI & ML Services/AI Hub.html"><strong aria-hidden="true">1.2.</strong> AI Hub</a></li><li class="chapter-item "><a href="../../AI & ML Services/AI Platform.html"><strong aria-hidden="true">1.3.</strong> AI Platform</a></li><li class="chapter-item "><a href="../../AI & ML Services/Cloud AutoML.html"><strong aria-hidden="true">1.4.</strong> Cloud AutoML</a></li></ol></li><li class="chapter-item "><a href="../../Compute Services/Compute Services.html"><strong aria-hidden="true">2.</strong> Compute Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Compute Services/App Engine.html"><strong aria-hidden="true">2.1.</strong> App Engine</a></li><li class="chapter-item "><a href="../../Compute Services/Cloud Functions.html"><strong aria-hidden="true">2.2.</strong> Cloud Functions</a></li><li class="chapter-item "><a href="../../Compute Services/Compute Engine.html"><strong aria-hidden="true">2.3.</strong> Compute Engine</a></li><li class="chapter-item "><a href="../../Compute Services/Kubernetes Engine.html"><strong aria-hidden="true">2.4.</strong> Kubernetes Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../../Data Analytics Services/Data Analytics Services.html"><strong aria-hidden="true">3.</strong> Data Analytics Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Data Analytics Services/BigQuery/BigQuery.html" class="active"><strong aria-hidden="true">3.1.</strong> BigQuery</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Storage & Database Services/Storage & Database Services.html"><strong aria-hidden="true">3.1.1.</strong> Storage &amp; Database Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Storage & Database Services/database_services.html"><strong aria-hidden="true">3.1.1.1.</strong> database_services</a></li></ol></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Architecture.html"><strong aria-hidden="true">3.1.2.</strong> Architecture</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Automatic schema detection.html"><strong aria-hidden="true">3.1.3.</strong> Automatic schema detection</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Best practices.html"><strong aria-hidden="true">3.1.4.</strong> Best practices</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Build Streaming data pipelines.html"><strong aria-hidden="true">3.1.5.</strong> Build Streaming data pipelines</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/CLI.html"><strong aria-hidden="true">3.1.6.</strong> CLI</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Caching.html"><strong aria-hidden="true">3.1.7.</strong> Caching</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Clustered Tables.html"><strong aria-hidden="true">3.1.8.</strong> Clustered Tables</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Copying dataset.html"><strong aria-hidden="true">3.1.9.</strong> Copying dataset</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Create & Query Permanent Table on Cloud Storage bucket.html"><strong aria-hidden="true">3.1.10.</strong> Create &amp; Query Permanent Table on Cloud Storage bucket</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Create Cloud Storage bucket.html"><strong aria-hidden="true">3.1.11.</strong> Create Cloud Storage bucket</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Designing Efficient Schemas.html"><strong aria-hidden="true">3.1.12.</strong> Designing Efficient Schemas</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Example of End-to-end Data Pipeline.html"><strong aria-hidden="true">3.1.13.</strong> Example of End-to-end Data Pipeline</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Execution Plan.html"><strong aria-hidden="true">3.1.14.</strong> Execution Plan</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/External data source Limitations.html"><strong aria-hidden="true">3.1.15.</strong> External data source Limitations</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Field partition.html"><strong aria-hidden="true">3.1.16.</strong> Field partition</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Ingestion time partition tables.html"><strong aria-hidden="true">3.1.17.</strong> Ingestion time partition tables</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Managing access.html"><strong aria-hidden="true">3.1.18.</strong> Managing access</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Manual operations on Table.html"><strong aria-hidden="true">3.1.19.</strong> Manual operations on Table</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Materialized Views.html"><strong aria-hidden="true">3.1.20.</strong> Materialized Views</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Maximum bytes billed.html"><strong aria-hidden="true">3.1.21.</strong> Maximum bytes billed</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Native operations on Table for Schema change.html"><strong aria-hidden="true">3.1.22.</strong> Native operations on Table for Schema change</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Pricing.html"><strong aria-hidden="true">3.1.23.</strong> Pricing</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Python lib.html"><strong aria-hidden="true">3.1.24.</strong> Python lib</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Query settings.html"><strong aria-hidden="true">3.1.25.</strong> Query settings</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Saved queries.html"><strong aria-hidden="true">3.1.26.</strong> Saved queries</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Scheduled queries.html"><strong aria-hidden="true">3.1.27.</strong> Scheduled queries</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Streaming data.html"><strong aria-hidden="true">3.1.28.</strong> Streaming data</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Table partitioning.html"><strong aria-hidden="true">3.1.29.</strong> Table partitioning</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/UI.html"><strong aria-hidden="true">3.1.30.</strong> UI</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Views.html"><strong aria-hidden="true">3.1.31.</strong> Views</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/When to use Clustering or Partitioning or Both.html"><strong aria-hidden="true">3.1.32.</strong> When to use Clustering or Partitioning or Both</a></li><li class="chapter-item "><a href="../../Data Analytics Services/BigQuery/Wildcards.html"><strong aria-hidden="true">3.1.33.</strong> Wildcards</a></li></ol></li><li class="chapter-item "><a href="../../Data Analytics Services/Big Query.html"><strong aria-hidden="true">3.2.</strong> Big Query</a></li><li class="chapter-item "><a href="../../Data Analytics Services/Cloud Dataflow.html"><strong aria-hidden="true">3.3.</strong> Cloud Dataflow</a></li><li class="chapter-item "><a href="../../Data Analytics Services/Cloud Datalab.html"><strong aria-hidden="true">3.4.</strong> Cloud Datalab</a></li><li class="chapter-item "><a href="../../Data Analytics Services/Cloud Dataproc.html"><strong aria-hidden="true">3.5.</strong> Cloud Dataproc</a></li><li class="chapter-item "><a href="../../Data Analytics Services/Cloud Pub Sub.html"><strong aria-hidden="true">3.6.</strong> Cloud Pub Sub</a></li><li class="chapter-item "><a href="../../Data Analytics Services/Data Studio.html"><strong aria-hidden="true">3.7.</strong> Data Studio</a></li></ol></li><li class="chapter-item "><a href="../../DevOps Services/DevOps Services.html"><strong aria-hidden="true">4.</strong> DevOps Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../DevOps Services/Cloud Build.html"><strong aria-hidden="true">4.1.</strong> Cloud Build</a></li><li class="chapter-item "><a href="../../DevOps Services/Cloud Source Repositories.html"><strong aria-hidden="true">4.2.</strong> Cloud Source Repositories</a></li><li class="chapter-item "><a href="../../DevOps Services/Container Registry.html"><strong aria-hidden="true">4.3.</strong> Container Registry</a></li><li class="chapter-item "><a href="../../DevOps Services/Example1.html"><strong aria-hidden="true">4.4.</strong> Example1</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> GCP-Notions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GCP-Notions/Project.html"><strong aria-hidden="true">5.1.</strong> Project</a></li><li class="chapter-item "><a href="../../GCP-Notions/Resource.html"><strong aria-hidden="true">5.2.</strong> Resource</a></li></ol></li><li class="chapter-item "><a href="../../Identity & Access Management/Identity & Access Management.html"><strong aria-hidden="true">6.</strong> Identity &amp; Access Management</a></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> Images</div></li><li class="chapter-item "><a href="../../Network Services/Network Services.html"><strong aria-hidden="true">8.</strong> Network Services</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.</strong> Notions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Notions/CI-CD.html"><strong aria-hidden="true">9.1.</strong> CI-CD</a></li><li class="chapter-item "><a href="../../Notions/Docker.html"><strong aria-hidden="true">9.2.</strong> Docker</a></li><li class="chapter-item "><a href="../../Notions/Ingestion.html"><strong aria-hidden="true">9.3.</strong> Ingestion</a></li><li class="chapter-item "><a href="../../Notions/Kubernetes.html"><strong aria-hidden="true">9.4.</strong> Kubernetes</a></li><li class="chapter-item "><a href="../../Notions/NoSQL.html"><strong aria-hidden="true">9.5.</strong> NoSQL</a></li><li class="chapter-item "><a href="../../Notions/Normalization-Denormalization.html"><strong aria-hidden="true">9.6.</strong> Normalization-Denormalization</a></li><li class="chapter-item "><a href="../../Notions/RDBMS.html"><strong aria-hidden="true">9.7.</strong> RDBMS</a></li><li class="chapter-item "><a href="../../Notions/REST.html"><strong aria-hidden="true">9.8.</strong> REST</a></li><li class="chapter-item "><a href="../../Notions/Redis.html"><strong aria-hidden="true">9.9.</strong> Redis</a></li><li class="chapter-item "><a href="../../Notions/Serverless.html"><strong aria-hidden="true">9.10.</strong> Serverless</a></li><li class="chapter-item "><a href="../../Notions/Window function.html"><strong aria-hidden="true">9.11.</strong> Window function</a></li><li class="chapter-item "><a href="../../Notions/failover.html"><strong aria-hidden="true">9.12.</strong> failover</a></li><li class="chapter-item "><a href="../../Notions/in-memory data store.html"><strong aria-hidden="true">9.13.</strong> in-memory data store</a></li><li class="chapter-item "><a href="../../Notions/on-premises.html"><strong aria-hidden="true">9.14.</strong> on-premises</a></li><li class="chapter-item "><a href="../../Notions/provisioning.html"><strong aria-hidden="true">9.15.</strong> provisioning</a></li></ol></li><li class="chapter-item "><a href="../../Main.html"><strong aria-hidden="true">10.</strong> Main</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">BigQuery</h1>
+
+                    <div class="right-buttons">
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bigquery"><a class="header" href="#bigquery">BigQuery</a></h1>
+<p><a href="../../Notions/Serverless.html">Serverless</a>, scalable cloud data warehouse</p>
+<p>Has built-in BI Engine and Machine Learning</p>
+<p>Uses SQL dialect </p>
+<p>Federated queries can process external data sources:</p>
+<ul>
+<li><span class="missing-link" style="color:darkred;">Cloud Storage</span></li>
+<li><span class="missing-link" style="color:darkred;">Cloud Bigtable</span></li>
+<li>Spreadsheets</li>
+</ul>
+<p>Keeps 7 days history of history</p>
+<p>Can analize big amounts of data in seconds</p>
+<h2 id="architecture"><a class="header" href="#architecture"><a href="Architecture.html">Architecture</a></a></h2>
+<h2 id="ui"><a class="header" href="#ui"><a href="UI.html">UI</a></a></h2>
+<h2 id="how-query-execution-plan-works"><a class="header" href="#how-query-execution-plan-works"><a href="Execution%20Plan.html">how Query Execution Plan works</a></a></h2>
+<h2 id="query"><a class="header" href="#query">Query</a></h2>
+<p><a href="Query%20settings.html">Query settings</a>
+<a href="Caching.html">Caching</a>
+<a href="Wildcards.html">Wildcards</a>: Enables to query <strong>multiple tables at once</strong> using concise SQL statements
+<a href="Scheduled%20queries.html">Scheduled queries</a> and backfilling
+<a href="Saved%20queries.html">Saved queries</a></p>
+<h2 id="schemas"><a class="header" href="#schemas">Schemas</a></h2>
+<p><a href="Automatic%20schema%20detection.html">Automatic schema detection</a>
+<a href="Designing%20Efficient%20Schemas.html">Designing Efficient Schemas</a> and <a href="Designing%20Efficient%20Schemas.html#nested-repeated-data">Designing Efficient Schemas</a></p>
+<h2 id="dataset"><a class="header" href="#dataset">Dataset</a></h2>
+<p><a href="Managing%20access.html">Managing access</a>
+<a href="Copying%20dataset.html">Copying dataset</a>
+<a href="Native%20operations%20on%20Table%20for%20Schema%20change.html">Native operations on Table for Schema change</a>
+<a href="Manual%20operations%20on%20Table.html">Manual operations on Table</a></p>
+<h2 id="table-partitioning"><a class="header" href="#table-partitioning">Table partitioning</a></h2>
+<p><a href="Table%20partitioning.html">Table partitioning</a>
+<a href="Ingestion%20time%20partition%20tables.html">Ingestion time partition tables</a>
+<a href="Field%20partition.html">Field partition</a></p>
+<h1 id="clustered-tables"><a class="header" href="#clustered-tables">Clustered Tables</a></h1>
+<p><a href="Clustered%20Tables.html">Clustered Tables</a>
+<a href="When%20to%20use%20Clustering%20or%20Partitioning%20or%20Both.html">When to use Clustering or Partitioning or Both</a>
+==todo== create clustered table
+==todo== <a href="Clustered%20Tables.html#do-and-donts">Clustered Tables</a></p>
+<h2 id="loading--querying-external-data-sources"><a class="header" href="#loading--querying-external-data-sources">Loading &amp; Querying External Data Sources</a></h2>
+<p><em>It can be in BigTable, CloudStorage, ClousSQL, Google Drive...</em></p>
+<p><a href="Create%20Cloud%20Storage%20bucket.html">Create Cloud Storage bucket</a>
+<a href="Create%20&amp;%20Query%20Permanent%20Table%20on%20Cloud%20Storage%20bucket.html">Create &amp; Query Permanent Table on Cloud Storage bucket</a>
+<a href="External%20data%20source%20Limitations.html">External data source Limitations</a></p>
+<h2 id="views"><a class="header" href="#views"><a href="Views.html">Views</a></a></h2>
+<p><a href="Materialized%20Views.html">Materialized Views</a></p>
+<h2 id="cli"><a class="header" href="#cli"><a href="CLI.html">CLI</a></a></h2>
+<h2 id="python-lib"><a class="header" href="#python-lib"><a href="Python%20lib.html">Python lib</a></a></h2>
+<p><a href="Example%20of%20End-to-end%20Data%20Pipeline.html">Example of End-to-end Data Pipeline</a>
+<a href="Build%20Streaming%20data%20pipelines.html">Build Streaming data pipelines</a></p>
+<h2 id="pricing"><a class="header" href="#pricing"><a href="Pricing.html">Pricing</a></a></h2>
+<h2 id="best-practices"><a class="header" href="#best-practices"><a href="Best%20practices.html">Best practices</a></a></h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var math = document.querySelectorAll("[class^=katex]");
+    for (var i = 0; i < math.length; i++) {
+      // Convert escaped ampersands before rendering
+      var toRender = math[i].textContent.replace(/&amp;/g, '&');
+      katex.render(toRender, math[i]);
+    }
+}, false)
+</script>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -140,16 +140,16 @@
 <p>Performs calculations on a set of rows that are related together. </p>
 <p>But, <u>unlike the aggregate functions</u>, windowing functions <strong>do not collapse the result</strong> of the rows into a single value. 
 Instead, all the rows <strong>maintain their original identity</strong> and the calculated <strong>result is returned for every row</strong>.</p>
-<p><img src="../../Images/SQL-Window_fn.png" alt="&quot;alt&quot;" /></p>
+<p><img src="../Images/SQL-Window_fn.png" alt="&quot;alt&quot;" /></p>
 <h2 id="windowing-with-partition-by"><a class="header" href="#windowing-with-partition-by">Windowing with PARTITION BY</a></h2>
 <p>The <strong>PARTITION BY</strong> clause is used in conjunction with the OVER clause. It breaks up the rows into different partitions. These partitions are then acted upon by the window function.</p>
 <p>For example, to display the total salary per job category for all the rows we would have to modify our original SQL query as follows:</p>
-<p><img src="../../Images/SQL-window_fn2.png" alt="&quot;alt&quot;" /></p>
+<p><img src="../Images/SQL-window_fn2.png" alt="&quot;alt&quot;" /></p>
 <h2 id="arranging-rows-within-partitions"><a class="header" href="#arranging-rows-within-partitions">Arranging Rows within Partitions</a></h2>
 <p>We know that to arrange rows in a table, we can use the ORDER BY clause. So, to arrange rows within each partition, we have to modify the OVER clause with the ORDER BY clause.</p>
-<p><img src="../../Images/SQL-window_fn3.png" alt="&quot;alt&quot;" /></p>
+<p><img src="../Images/SQL-window_fn3.png" alt="&quot;alt&quot;" /></p>
 <h2 id="window-functions"><a class="header" href="#window-functions">Window functions</a></h2>
-<p>https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/#h2_10</p>
+<p><a href="https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/#h2_10">More at</a></p>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>

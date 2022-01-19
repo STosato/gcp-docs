@@ -5,7 +5,7 @@ Fully managed platform: no need to deal with provisioning/configurating/scaling/
 Just: bring code -> deploy -> scale
 
 Available in 2 environments:
-- **Standard**: runs in a <u>sandbox</u> <span class="commento">$\sim$ with limitations</span>
+- **Standard**: runs in a <u>sandbox</u> <span class="commento">\\(\sim\\) with limitations</span>
 - **Flexible**: 
 	- maximum control
 	- uses [[Docker]] to deploy and scale

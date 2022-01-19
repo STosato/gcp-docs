@@ -1,5 +1,5 @@
 # Compute Services
-Where code is **deployed** and **executed** </br>
+Where code is **deployed** and **executed** 
 
 - **Serverless environment**
 

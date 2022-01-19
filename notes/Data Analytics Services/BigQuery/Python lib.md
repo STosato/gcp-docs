@@ -1,7 +1,7 @@
 # Python Client Library
 ## Preliminary
  ### 1. Setting service account key
- IAM & Admin > Service Accounts > New Service account
+ IAM & Admin > Service Accounts > New Service account and get a **service key**
 
  ### 2. install package
  pip install google-cloud-bigquery

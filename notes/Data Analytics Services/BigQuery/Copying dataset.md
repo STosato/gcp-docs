@@ -1,5 +1,5 @@
 # Copying dataset
-Once created, a dataset ****<span class="red">can't change location</span>**. Qee need to **make a copy**.
+Once created, a dataset **can't change location**. The only way to do that is **making a copy**.
 
 First,
 

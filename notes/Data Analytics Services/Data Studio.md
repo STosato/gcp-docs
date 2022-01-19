@@ -66,3 +66,19 @@ Can set an **Auto-Update**
 A way to reveal additional levels of detail within a chart by clicking on arrows on the top of the tables.
 
 ex. time series in the order of years, can be drilled down into months
+
+## Geographics Chart
+![geo chart](https://lh3.googleusercontent.com/1NMeArZXBnWOvNbGGa1cDIdikVeNNgakIpxpy1KM8iII26KtVjXZzDI-BGYjFWWwusA=rwa)
+Zoom area can be world, single continent, subcontinents and single countries.
+
+Different **chart styles** can be set according to the metrics.
+
+Also the map can be customized: *map/satellite, roads, landmarks, labels*
+
+### Metric sliders
+*Metrics > Metric sliders*
+
+A filter can be applied via slider by clicking on the *settings icon* on the top right of the chart.
+
+## Custom Visualizations
+> Caution: 

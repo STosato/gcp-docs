@@ -1,5 +1,5 @@
 # Pricing
-https://cloud.google.com/products/calculator
+[Calculator](https://cloud.google.com/products/calculator)
 ## Storage
 Two types:
 

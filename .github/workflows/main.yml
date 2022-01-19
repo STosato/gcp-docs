@@ -18,7 +18,7 @@ jobs:
         uses: actions-rs/install@v0.1.2
         with:
           crate: mdzk
-          version: latest
+          version: 0.4.3
 
       - name: Build ZK
         run: mdzk build

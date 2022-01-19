@@ -139,7 +139,7 @@
                         <h1 id="datastudio"><a class="header" href="#datastudio">DataStudio</a></h1>
 <h1 id="tables"><a class="header" href="#tables">Tables</a></h1>
 <h3 id="data-optional-metrics"><a class="header" href="#data-optional-metrics">Data&gt; Optional metrics</a></h3>
-<p>Other metrics that are hidden. 
+<p>Adding other metrics hidden by default.
 You can select/deselect them by clicking on the bar icon at the top right of the table.</p>
 <h3 id="data--interactions--apply-filter"><a class="header" href="#data--interactions--apply-filter">Data &gt; Interactions &gt; Apply filter</a></h3>
 <p>When clicking a row in the table, a filter will be applied to all the data</p>
@@ -161,8 +161,31 @@ You can select/deselect them by clicking on the bar icon at the top right of the
 <li>Difference from max</li>
 <li>Percentage difference from max</li>
 </ul>
-<h1 id="running-calculation"><a class="header" href="#running-calculation">Running Calculation</a></h1>
+<h1 id="running-calculations"><a class="header" href="#running-calculations">Running Calculations</a></h1>
 <p>Data &gt; Metric &gt; &lt;selected metrics&gt; &gt; Edit &gt; Running Calculation</p>
+<p>Also called &quot;Running summaries&quot;</p>
+<h2 id="running-sum"><a class="header" href="#running-sum">Running sum</a></h2>
+<p>Each new row is added to the sum of the previous row(s).</p>
+<p><img src="../Images/Running-sum-example.png" alt="Running Sum" /></p>
+<h1 id="creating-custom-calculation-fields"><a class="header" href="#creating-custom-calculation-fields">Creating custom calculation fields</a></h1>
+<p>Resources &gt; Manage added resources &gt; &lt;row of the desired source&gt; &gt; edit &gt; Add field</p>
+<p>You need to add a <em>field name</em> and write the formula using existent fields.</p>
+<p><strong>Case statement</strong> can also be used</p>
+<h3 id="comparison-date-range"><a class="header" href="#comparison-date-range">Comparison Date Range</a></h3>
+<p>Data &gt; Comparison Date Range</p>
+<p><img src="comparison-date-range.png" alt="comparison-date-range.png" /></p>
+<h1 id="extract-data"><a class="header" href="#extract-data">Extract data</a></h1>
+<p>Data Source &gt; Extract Data
+<strong>Improves the performance</strong> of reports and explorations by extracting data from your data set creating a <strong>brand new table</strong>.</p>
+<p>Can use existing data sources of any type, then select the specific fields you want to include in the extracted data source.</p>
+<p>Can set an <strong>Auto-Update</strong></p>
+<blockquote>
+<p>Extracting data from an <strong>already aggregated</strong> data set, such as Google Ads or Analytics, creates a new, disaggregated data set.</p>
+</blockquote>
+<h1 id="charts"><a class="header" href="#charts">Charts</a></h1>
+<h2 id="drill-down"><a class="header" href="#drill-down">Drill Down</a></h2>
+<p>A way to reveal additional levels of detail within a chart by clicking on arrows on the top of the tables.</p>
+<p>ex. time series in the order of years, can be drilled down into months</p>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>

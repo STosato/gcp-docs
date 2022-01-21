@@ -91,8 +91,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div><img scr='./menu_header.png'/></div>
-            <div class="sidebar-scrollbox">
+            <div><img src='{{ path_to_root }}/menu_header.png' style="max-width: 100%;"/></div>
+            <div class="sidebar-scrollbox" style="top: 50px">
                 {{#toc}}{{/toc}}
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>

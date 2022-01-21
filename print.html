@@ -851,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 id="permanent-vs-temporary-tables"><a class="header" href="#permanent-vs-temporary-tables">Permanent vs temporary tables</a></h3>
 <p><img src="Data%20Analytics%20Services/BigQuery/../../Images/permanent_vs_temp_tables.png" alt="&quot;alt&quot;" /></p>
 <h3 id="printing-filename-where-table-belongs"><a class="header" href="#printing-filename-where-table-belongs">Printing filename where table belongs</a></h3>
-<pre><code class="language-SQL">SELECT _FILE_NAME
+<pre><code class="language-sql">SELECT _FILE_NAME
 </code></pre>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
@@ -892,7 +892,7 @@ Only <strong><span class="orange">nested</span> columns</strong> are <strong><sp
 <p>So nested and repeated columns can <strong>mantain relationships</strong> without perdormance impact.</p>
 <p><img src="Data%20Analytics%20Services/BigQuery/../../Images/nested-table-example.png" alt="&quot;alt&quot;" /></p>
 <p>Here's the file</p>
-<pre><code class="language-JSON">{
+<pre><code class="language-json">{
   &quot;orderId&quot;: 1,
   &quot;storeLocation&quot;: &quot;NY&quot;,
   &quot;products&quot;: [
@@ -918,7 +918,7 @@ Then a <span class="green">+ (plus)</span> button will appear at the right of th
 <p><img src="Data%20Analytics%20Services/BigQuery/../../Images/nested-field-schema-manual.png" alt="&quot;alt&quot;" /></p>
 <h2 id="how-to-query-the-table"><a class="header" href="#how-to-query-the-table">How to query the table</a></h2>
 <p>You'll need to use <code>UNNEST</code></p>
-<pre><code class="language-SQL">SELECT storeLocation, products 
+<pre><code class="language-sql">SELECT storeLocation, products 
 FROM `bigquery-demo-285417.dataset1.kiopl` 
 CROSS JOIN UNNEST(products) as a
 where a.productName = &quot;Grinder&quot;
@@ -1126,7 +1126,7 @@ with models.DAG('food_orders_dag',
 </code></pre>
 <h3 id="cloud-composer"><a class="header" href="#cloud-composer">Cloud composer</a></h3>
 <p>On Bq, search  &quot;Cloud composer&quot; &gt; create envirnoment</p>
-<p>![&quot;alt&quot;](../../Images/Pasted image 20220105162936.png)</p>
+<p><img src="Data%20Analytics%20Services/BigQuery/../../Images/Pasted%20image%2020220105162936.png" alt="&quot;alt&quot;" /></p>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -1237,7 +1237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><code>_PARTITIONDATE</code></li>
 </ul>
 <h2 id="getting-summary"><a class="header" href="#getting-summary">Getting summary</a></h2>
-<pre><code class="language-SQL">SELECT * FROM [dataset.table$__PARTITIONS_SUMMARY__]
+<pre><code class="language-sql">SELECT * FROM [dataset.table$__PARTITIONS_SUMMARY__]
 </code></pre>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
@@ -1267,7 +1267,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script><div style="break-before: page; page-break-before: always;"></div><h1 id="manual-operations-on-table"><a class="header" href="#manual-operations-on-table">Manual operations on Table</a></h1>
 <h2 id="changing-column-names"><a class="header" href="#changing-column-names">Changing column names</a></h2>
 <p>Can be done by writing a query where setting <strong>aliases</strong> for the new columns</p>
-<pre><code class="language-SQL">SELECT * EXCEPT(name_to_change),
+<pre><code class="language-sql">SELECT * EXCEPT(name_to_change),
 	  name_to_change as new_name
 FROM table_name
 </code></pre>
@@ -1276,13 +1276,13 @@ FROM table_name
 <h2 id="changing-datatype"><a class="header" href="#changing-datatype">Changing datatype</a></h2>
 <p>By using a query where we cast the desired column to the desired data type.</p>
 <p><em><strong>NB:</strong></em> Some types can't be directly casted</p>
-<pre><code class="language-SQL">SELECT * EXCEPT(col_to_change),
+<pre><code class="language-sql">SELECT * EXCEPT(col_to_change),
 	  CAST(col_to_change as TYPE) as col_to_change
 FROM table_name
 </code></pre>
 <p>Then use the same  <strong>query settings</strong> as [[#Changing column names]].</p>
 <h2 id="deleting-column"><a class="header" href="#deleting-column">Deleting column</a></h2>
-<pre><code class="language-SQL">SELECT * EXCEPT(col_to_remove),
+<pre><code class="language-sql">SELECT * EXCEPT(col_to_remove),
 FROM table_name
 </code></pre>
 <p>Then use the same  <strong>query settings</strong> as [[#Changing column names]].</p>
@@ -1293,7 +1293,7 @@ FROM table_name
 <h2 id="getting-old-table-values"><a class="header" href="#getting-old-table-values">Getting old table values</a></h2>
 <p>You can get a table value from the last <strong>7 days</strong>.</p>
 <p>Here's an example:</p>
-<pre><code class="language-SQL">select * 
+<pre><code class="language-sql">select * 
 FROM table_name FOR SYSTEM_TIME AS OF TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR)
 </code></pre>
 <p>then, by &quot;query settings&quot; you can save it wherever you want.</p>
@@ -1780,12 +1780,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>If having a dataset containing tables with the same schema for every year. say:</p>
 <p><em>weather2000, weather2001, ... , weather2021</em></p>
 <p>you can use</p>
-<pre><code class="language-SQL">SELECT ...
+<pre><code class="language-sql">SELECT ...
 FROM `dataset.weather200`
 </code></pre>
 <p>to get the union from years 2000 to 2009</p>
 <h2 id="filtering-by-suffix"><a class="header" href="#filtering-by-suffix">Filtering by suffix</a></h2>
-<pre><code class="language-SQL">SELECT ...
+<pre><code class="language-sql">SELECT ...
 FROM &lt;wildcard&gt;
 WHERE _TABLE_SUFFIX = &lt;wanted suffix&gt;
 </code></pre>

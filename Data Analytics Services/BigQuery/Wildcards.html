@@ -149,12 +149,12 @@
 <p>If having a dataset containing tables with the same schema for every year. say:</p>
 <p><em>weather2000, weather2001, ... , weather2021</em></p>
 <p>you can use</p>
-<pre><code class="language-SQL">SELECT ...
+<pre><code class="language-sql">SELECT ...
 FROM `dataset.weather200`
 </code></pre>
 <p>to get the union from years 2000 to 2009</p>
 <h2 id="filtering-by-suffix"><a class="header" href="#filtering-by-suffix">Filtering by suffix</a></h2>
-<pre><code class="language-SQL">SELECT ...
+<pre><code class="language-sql">SELECT ...
 FROM &lt;wildcard&gt;
 WHERE _TABLE_SUFFIX = &lt;wanted suffix&gt;
 </code></pre>

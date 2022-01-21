@@ -139,7 +139,7 @@
                         <h1 id="manual-operations-on-table"><a class="header" href="#manual-operations-on-table">Manual operations on Table</a></h1>
 <h2 id="changing-column-names"><a class="header" href="#changing-column-names">Changing column names</a></h2>
 <p>Can be done by writing a query where setting <strong>aliases</strong> for the new columns</p>
-<pre><code class="language-SQL">SELECT * EXCEPT(name_to_change),
+<pre><code class="language-sql">SELECT * EXCEPT(name_to_change),
 	  name_to_change as new_name
 FROM table_name
 </code></pre>
@@ -148,13 +148,13 @@ FROM table_name
 <h2 id="changing-datatype"><a class="header" href="#changing-datatype">Changing datatype</a></h2>
 <p>By using a query where we cast the desired column to the desired data type.</p>
 <p><em><strong>NB:</strong></em> Some types can't be directly casted</p>
-<pre><code class="language-SQL">SELECT * EXCEPT(col_to_change),
+<pre><code class="language-sql">SELECT * EXCEPT(col_to_change),
 	  CAST(col_to_change as TYPE) as col_to_change
 FROM table_name
 </code></pre>
 <p>Then use the same  <strong>query settings</strong> as [[#Changing column names]].</p>
 <h2 id="deleting-column"><a class="header" href="#deleting-column">Deleting column</a></h2>
-<pre><code class="language-SQL">SELECT * EXCEPT(col_to_remove),
+<pre><code class="language-sql">SELECT * EXCEPT(col_to_remove),
 FROM table_name
 </code></pre>
 <p>Then use the same  <strong>query settings</strong> as [[#Changing column names]].</p>
@@ -165,7 +165,7 @@ FROM table_name
 <h2 id="getting-old-table-values"><a class="header" href="#getting-old-table-values">Getting old table values</a></h2>
 <p>You can get a table value from the last <strong>7 days</strong>.</p>
 <p>Here's an example:</p>
-<pre><code class="language-SQL">select * 
+<pre><code class="language-sql">select * 
 FROM table_name FOR SYSTEM_TIME AS OF TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR)
 </code></pre>
 <p>then, by &quot;query settings&quot; you can save it wherever you want.</p>

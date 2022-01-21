@@ -148,7 +148,7 @@ Only <strong><span class="orange">nested</span> columns</strong> are <strong><sp
 <p>So nested and repeated columns can <strong>mantain relationships</strong> without perdormance impact.</p>
 <p><img src="../../Images/nested-table-example.png" alt="&quot;alt&quot;" /></p>
 <p>Here's the file</p>
-<pre><code class="language-JSON">{
+<pre><code class="language-json">{
   &quot;orderId&quot;: 1,
   &quot;storeLocation&quot;: &quot;NY&quot;,
   &quot;products&quot;: [
@@ -174,7 +174,7 @@ Then a <span class="green">+ (plus)</span> button will appear at the right of th
 <p><img src="../../Images/nested-field-schema-manual.png" alt="&quot;alt&quot;" /></p>
 <h2 id="how-to-query-the-table"><a class="header" href="#how-to-query-the-table">How to query the table</a></h2>
 <p>You'll need to use <code>UNNEST</code></p>
-<pre><code class="language-SQL">SELECT storeLocation, products 
+<pre><code class="language-sql">SELECT storeLocation, products 
 FROM `bigquery-demo-285417.dataset1.kiopl` 
 CROSS JOIN UNNEST(products) as a
 where a.productName = &quot;Grinder&quot;

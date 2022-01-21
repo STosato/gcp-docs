@@ -32,6 +32,6 @@ graph TD
  C --> E[File]
 ```
 
-!["alt"](images/Pasted image 20211230165549.png)
+!["alt"](../../../Images/Pasted image 20211230165549.png)
 
-![[database_services]]
+# [[database_services]]

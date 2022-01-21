@@ -48,4 +48,4 @@ Controller {
 
 ```
 
-More at https://cloud.google.com/blog/products/bigquery/in-memory-query-execution-in-google-bigquery
+[More](https://cloud.google.com/blog/products/bigquery/in-memory-query-execution-in-google-bigquery)

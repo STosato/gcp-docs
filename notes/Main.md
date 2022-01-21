@@ -1,6 +1,6 @@
 # Google Cloud Platform
 ## GCP vs others
-!
+![Images/GCP_vs_others.png](Images/GCP_vs_others.png)
 ## Network
 GCP is divided in **regions** -> **zones** -> **network edge locations** 
 ## The Big picture
@@ -20,16 +20,19 @@ Can be done via:
 - CLI (DevOps)
 - [[REST]] API
 
-![[Compute Services]]
+## [[Compute Services]]
 
-![[Storage & Database Services]]
+## [[Storage & Database Services]]
 
-
-![[Network Services]]
+## [[Network Services]]
 
 # Security & Identity Services
 [[Identity & Access Management]]
+
 [[database_services]]
+
 [[Data Analytics Services]]
+
 [[AI & ML Services]]
+
 [[DevOps Services]]

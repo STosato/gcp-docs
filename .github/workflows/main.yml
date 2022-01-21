@@ -11,13 +11,19 @@ jobs:
     name: Build, Test and Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install mdzk
+        uses: actions-rs/install@v0.1.2
         with:
-          toolchain: stable
-      - run: (test -x $HOME/.cargo/bin/mdzk || cargo install mdzk --version 0.4.3)
-      - run: mdzk build
-      - uses: JamesIves/github-pages-deploy-action@4.1.7
+          crate: mdzk
+          version: 0.4.3
+
+      - name: Build ZK
+        run: mdzk build
+      - name: Publish
+        uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: html # The folder the action should deploy.

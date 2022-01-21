@@ -14,7 +14,7 @@ Can route requests also across the globe
 Both can be internal or external for *scalability*
 
 
-!["alt"](../../Images/Load Balancing.png)
+!["alt"](../Images/Load Balancing.png)
 ## Virtual Prvate Cloud
 Software-defined network providing private networking for VMs.
 

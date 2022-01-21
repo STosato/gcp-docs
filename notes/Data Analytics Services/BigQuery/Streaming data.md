@@ -10,4 +10,5 @@ Then, in **Resources** tab select **Cloud Dataflow Sources**
 
 ## 2. Create Dataflow Job
 !["alt"](../../Images/dataflow-job.png)
+
 The **destination** can be *BigQuery table* or *Pub/Sub topic*

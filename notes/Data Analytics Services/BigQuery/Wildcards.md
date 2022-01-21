@@ -15,14 +15,14 @@ If having a dataset containing tables with the same schema for every year. say:
 *weather2000, weather2001, ... , weather2021*
 
 you can use
-```SQL
+```sql
 SELECT ...
 FROM `dataset.weather200`
 ```
 to get the union from years 2000 to 2009
 
 ## Filtering by suffix
-```SQL
+```sql
 SELECT ...
 FROM <wildcard>
 WHERE _TABLE_SUFFIX = <wanted suffix>

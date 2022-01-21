@@ -2,7 +2,7 @@
 
 ## Changing column names
 Can be done by writing a query where setting **aliases** for the new columns
-```SQL
+```sql
 SELECT * EXCEPT(name_to_change),
 	  name_to_change as new_name
 FROM table_name
@@ -17,7 +17,7 @@ By using a query where we cast the desired column to the desired data type.
 
 ***NB:*** Some types can't be directly casted
 
-```SQL
+```sql
 SELECT * EXCEPT(col_to_change),
 	  CAST(col_to_change as TYPE) as col_to_change
 FROM table_name
@@ -27,7 +27,7 @@ Then use the same  **query settings** as [[#Changing column names]].
 
 ## Deleting column
 
-```SQL
+```sql
 SELECT * EXCEPT(col_to_remove),
 FROM table_name
 ```
@@ -42,7 +42,7 @@ Using cloud storage to save the old table and creating a new one, then restoring
 You can get a table value from the last **7 days**.
 
 Here's an example:
-```SQL
+```sql
 select * 
 FROM table_name FOR SYSTEM_TIME AS OF TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR)
 ```

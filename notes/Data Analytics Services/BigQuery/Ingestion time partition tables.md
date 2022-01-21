@@ -9,7 +9,7 @@ When selecting pseudo-columns, you must use **aliases**.
 
 ## Getting summary
 
-```SQL
+```sql
 SELECT * FROM [dataset.table$__PARTITIONS_SUMMARY__]
 ```
 

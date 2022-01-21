@@ -210,4 +210,4 @@ with models.DAG('food_orders_dag',
 On Bq, search  "Cloud composer" > create envirnoment
 
 
-!["alt"](../../Images/Pasted image 20220105162936.png)
+!["alt"](<../../Images/Pasted image 20220105162936.png>)

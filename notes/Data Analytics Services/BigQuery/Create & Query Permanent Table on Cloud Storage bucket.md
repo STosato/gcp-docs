@@ -14,6 +14,6 @@ Create table from: "Google Cloud storage" > Browse the file
 
 ### Printing filename where table belongs
 
-```SQL
+```sql
 SELECT _FILE_NAME
 ```

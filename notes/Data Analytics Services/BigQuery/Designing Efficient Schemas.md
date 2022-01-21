@@ -19,7 +19,7 @@ So nested and repeated columns can **mantain relationships** without perdormance
 !["alt"](../../Images/nested-table-example.png)
 
 Here's the file
-```JSON
+```json
 {
   "orderId": 1,
   "storeLocation": "NY",
@@ -51,7 +51,7 @@ Then a <span class="green">+ (plus)</span> button will appear at the right of th
 
 ## How to query the table
 You'll need to use `UNNEST`
-```SQL
+```sql
 SELECT storeLocation, products 
 FROM `bigquery-demo-285417.dataset1.kiopl` 
 CROSS JOIN UNNEST(products) as a
